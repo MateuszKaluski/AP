@@ -1,0 +1,78 @@
+.nav--is-hide {
+    display: none;
+}
+
+//  to moze byc razem
+.contact--is-hide {
+    display: none;
+}
+
+
+.nav {
+    z-index:5;
+    position: fixed;
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100vh;
+    background-color: $background-color2;
+
+    .nav__logo{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__exit-button {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        color: $text-color3;
+        font-size: 2rem;
+
+        text-align: right;
+
+        .x-size {
+            cursor: pointer;
+            height: 30%;
+        }
+    }
+    .nav__menu, .contact {
+        margin-top: 100px;
+
+    }
+    .contact__phone1 {
+        margin-top: 305px;
+    }
+    .contact__phone1, .contact__mail {
+        text-align: start;
+        padding: 1% 0 1% 0%;
+
+        color: $text-color3;
+        line-height: 1.5rem;
+        font-size: 1.4rem;
+        font-weight: bold;
+
+    }
+    .nav__item {
+        text-align: start;
+
+        a, div {
+            color: $text-color3;
+            font-size: 4rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        a:hover, div:hover {
+            color: $text-color4;
+        }
+    }
+}
+
+
+

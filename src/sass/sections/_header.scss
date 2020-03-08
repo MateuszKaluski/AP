@@ -1,0 +1,30 @@
+.header2 {
+    position: fixed;
+    justify-content: center;
+    top:0;
+    z-index: 2;
+
+    height: 10vh;
+    width: 100%;
+    background-color: #ffffffd8;
+
+
+    .header__logo {
+        display: flex;
+        align-items: center;
+        .logo {
+            cursor: pointer;
+        }
+    }
+    .header__nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 10vh;
+        .burger-size {
+            cursor: pointer;
+            height: 20%;
+        }
+    }
+}
+

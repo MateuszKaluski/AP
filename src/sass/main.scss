@@ -1,0 +1,24 @@
+@import "general/reset";
+@import "general/configuration";
+
+@import "settings/all";
+@import "settings/colors";
+
+@import "sections/header";
+// @import "sections/headerMax";
+@import "sections/headerSubpage";
+@import "sections/nav";
+@import "sections/navSubpages";
+@import "sections/projects";
+@import "sections/project";
+@import "sections/projectTitle";
+
+@import "sections/about";
+
+@import "sections/ProjectMarginBottom";
+@import "sections/footer";
+
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+// @import '../../node_modules/font-awesome/css/font-awesome.min.css'

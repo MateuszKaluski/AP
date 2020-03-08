@@ -1,0 +1,36 @@
+.about {
+    width: 100%;
+    background-color: $background-color;
+    color: $text-color5;
+
+    padding: 5% 0%;
+    margin-top: 10vh;
+
+}
+.about__info {
+    display: block;
+    width: 50%;
+    // color: $text-color5;
+    .about__autor {
+        font-weight: 500;
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    .about__textLight, .about__textBold {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    .about__textBold {
+        font-weight: 500;
+    }
+    .about__textLight {
+        font-weight: 400;
+    }
+}
+.about__foto {
+    display: flex;
+    align-items: center;
+    .foto-size {
+        width: 80%;
+    }
+}
