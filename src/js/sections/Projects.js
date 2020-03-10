@@ -7,7 +7,7 @@ class Projects extends Component {
         data: []
     }
     componentDidMount() {
-        fetch("http://localhost:3000/projects")
+        fetch("https://api.nice-studio.pl/projects/")
             .then(resp => resp.json())
             .then(data => {
                 this.setState({

@@ -13,12 +13,13 @@ class Project extends Component {
         data: null,
     }
     load = () => {
-        fetch("http://localhost:3000/projects/" + this.props.match.params.id)
+        fetch("https://api.nice-studio.pl/projects/" + this.props.match.params.id)
             .then(resp => resp.json())
             .then(data => {
                 this.setState({
                     data: data,
                 })
+                console.log(data)
             })
     }
     componentDidMount() {
@@ -35,16 +36,20 @@ class Project extends Component {
 
     }
     render() {
-        if (this.state.data === null) {
+        if (this.state.data === null || !this.state.data) {
             return (
                 null
             )
         }
 
-        const images = this.state.data.images.map((img, i) => <img className='project__img' key={i} src={img}></img>)
-        //
-        //
-        const videos = this.state.data.videos.map((video, i) => <video className='project__video' key={i} src={video} controls autoPlay loop height="700" width="1000" ></video>)
+        let images = null;
+        let videos = null;
+        if (this.state.data.length !== 0) {
+
+            images = this.state.data[0].images.map((img, i) => <img className='project__img' key={i} src={img}></img>)
+            videos = this.state.data[0].videos.map((video, i) => <video className='project__video' key={i} src={video} controls autoPlay loop height="700" width="1000" ></video>)
+        }
+
         //
         // <video src="/images/amway artistry/AA1.mp4" controls autoPlay loop height="300" width="400">
         // </video>
