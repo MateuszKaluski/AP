@@ -13,12 +13,13 @@ class Project extends Component {
         data: null,
     }
     load = () => {
-        fetch("http://localhost:3000/projects/" + this.props.match.params.id)
+        fetch("https://api.nice-studio.pl/projects/" + this.props.match.params.id)
             .then(resp => resp.json())
             .then(data => {
                 this.setState({
                     data: data,
                 })
+                console.log(data)
             })
     }
     componentDidMount() {
@@ -35,7 +36,7 @@ class Project extends Component {
 
     }
     render() {
-        if (this.state.data === null) {
+        if (this.state.data === null || !this.state.data) {
             return (
                 null
             )
