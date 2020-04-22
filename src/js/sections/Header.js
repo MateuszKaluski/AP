@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { Spring } from 'react-spring';
 
 class Header extends Component {
     handleClick() {
         const nav = document.querySelector('.nav--is-hide');
         nav.style.display = 'block'
     }
+
     render() {
 
         return (
             <>
-                <header className='header2'>
+                <header className='header3'>
                     <div className='container'>
                         <div className='row'>
                             <div className='header__logo col-3'>

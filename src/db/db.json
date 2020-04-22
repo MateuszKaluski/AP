@@ -2,72 +2,6 @@
   "projects": [
     {
       "id": 1,
-      "title": "Edrone",
-      "description": "landing page",
-      "text": "Projekt strony internetowej wykonany na podstawie prezentacji dla systemu CRM",
-      "imagesMin": ["/images/edrone/miniatura-edrone.png"],
-      "images": [
-        "/images/edrone/1_edrone.png",
-        "/images/edrone/2_edrone.png",
-        "/images/edrone/3_edrone.png",
-        "/images/edrone/4_edrone.png",
-        "/images/edrone/5_edrone.png",
-        "/images/edrone/6_edrone.png",
-        "/images/edrone/7_edrone.png"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 2,
-      "title": "Nutella Xmas",
-      "description": "kampania digital, materiały POS",
-      "text": "Projekt strony internetowej, materiałów social media oraz materiałów POS kampanii świątecznej dla marki Nutella.",
-      "imagesMin": ["/images/nutella x mas/nutella-x-mas_miniatury.png"],
-      "images": [
-        "/images/nutella x mas/1.png",
-        "/images/nutella x mas/2.png",
-        "/images/nutella x mas/3.png",
-        "/images/nutella x mas/4.png",
-        "/images/nutella x mas/5.png"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 3,
-      "title": "Piwo-War",
-      "description": "projekt produktu",
-      "text": "Projekt zestawu naczyń do domowej produkcji piwa.",
-      "imagesMin": ["/images/piwowarstwo/piwowarstwo-miniatury.png"],
-      "images": [
-        "/images/piwowarstwo/piwowarstwo_1.png",
-        "/images/piwowarstwo/piwowarstwo_2.png",
-        "/images/piwowarstwo/piwowarstwo_3.png",
-        "/images/piwowarstwo/piwowarstwo_4.png"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 4,
-      "title": "Sobieski",
-      "description": "key visual, social media",
-      "text": "Projekt koncepcji kreatywnej oraz grafik do social media dla marki Vódka Sobieski.",
-      "imagesMin": ["/images/sobieski/sobieski-miniatury.png"],
-      "images": [
-        "/images/sobieski/1.png",
-        "/images/sobieski/2.png",
-        "/images/sobieski/3.png",
-        "/images/sobieski/4.png",
-        "/images/sobieski/5.png",
-        "/images/sobieski/6.jpg"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 5,
       "title": "Tic Tac 50. urodziny",
       "description": "strona www",
       "text": "Projekt strony internetowej kampanii z okazji 50. urodzin marki Tic Tac.",
@@ -85,7 +19,7 @@
       "lastProject": false
     },
     {
-      "id": 6,
+      "id": 2,
       "title": "Tic tac Winter Promo",
       "description": "strona www",
       "text": "Projekt strony internetowej kampanii świątecznej  dla marki Tic Tac.",
@@ -102,23 +36,88 @@
       "lastProject": false
     },
     {
-      "id": 7,
-      "title": "Eduneo",
-      "description": "kampania digital, materiały wewnętrzne",
-      "text": "Projekt strony sprzedażowej, roll-up, grafik do social media oraz papieru firmowego dla platformy Eduneo.",
-      "imagesMin": ["/images/vod/vod_miniatury.png"],
+      "id": 3,
+      "title": "Sobieski",
+      "description": "key visual, social media",
+      "text": "Projekt koncepcji kreatywnej oraz grafik do social media dla marki Vódka Sobieski.",
+      "imagesMin": ["/images/sobieski/sobieski-miniatury.png"],
       "images": [
-        "/images/vod/www_wiz_1.png",
-        "/images/vod/www_wiz_2.png",
-        "/images/vod/www_wiz_3.png",
-        "/images/vod/www_wiz_4.png",
-        "/images/vod/www_wiz_5.png",
-        "/images/vod/www_wiz_6.png",
-        "/images/vod/www_wiz_7.png",
-        "/images/vod/8.png",
-        "/images/vod/9.png"
+        "/images/sobieski/1.png",
+        "/images/sobieski/2.png",
+        "/images/sobieski/3.png",
+        "/images/sobieski/4.png",
+        "/images/sobieski/5.png",
+        "/images/sobieski/6.jpg"
       ],
       "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 4,
+      "title": "Nutella Xmas",
+      "description": "kampania digital, materiały POS",
+      "text": "Projekt strony internetowej, materiałów social media oraz materiałów POS kampanii świątecznej dla marki Nutella.",
+      "imagesMin": ["/images/nutella x mas/nutella-x-mas_miniatury.png"],
+      "images": [
+        "/images/nutella x mas/1.png",
+        "/images/nutella x mas/2.png",
+        "/images/nutella x mas/3.png",
+        "/images/nutella x mas/4.png",
+        "/images/nutella x mas/5.png"
+      ],
+      "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 5,
+      "title": "Capitan Jack",
+      "description": "kampania digital",
+      "text": "Projekt strony internetowej do aktywacji On Trade oraz materiałów do social media do aktywacji Karaiby dla marki Capitan Jack.",
+      "imagesMin": ["/images/cj/CJminiatury.png"],
+      "images": [
+        "/images/cj/1.png",
+        "/images/cj/2.png",
+        "/images/cj/3.png",
+        "/images/cj/4.png",
+        "/images/cj/5.png",
+        "/images/cj/6.png"
+      ],
+      "videos": [
+        "/images/cj/7.mp4",
+        "/images/cj/8.mp4",
+        "/images/cj/9.mp4"
+      ],
+      "lastProject": false
+    },
+    {
+      "id": 6,
+      "title": "William Peel",
+      "description": "landing page",
+      "text": "Projekt strony internetowej  aktywacji Hit the Stage dla marki William Peel.",
+      "imagesMin": ["/images/WP/miniatury.png"],
+      "images": [
+        "/images/WP/WP1.png",
+        "/images/WP/WP2.png",
+        "/images/WP/WP3.png",
+        "/images/WP/WP4.png",
+        "/images/WP/WP5.png",
+        "/images/WP/WP6.png",
+        "/images/WP/WP7.png",
+        "/images/WP/WP8.png"
+      ],
+      "videos": ["/images/WP/WP9.mp4"],
+      "lastProject": false
+    },
+    {
+      "id": 7,
+      "title": "Yves Rocher",
+      "description": "social media",
+      "text": "Projekt grafik social media dla kosmetyków marki Yves Rocher",
+      "imagesMin": ["/images/roche/roche_miniatury.png"],
+      "images": [],
+      "videos": [
+        "/images/roche/roche1.mp4"
+      ],
       "lastProject": false
     },
     {
@@ -140,30 +139,6 @@
     },
     {
       "id": 9,
-      "title": "Browanza",
-      "description": "identyfikacja wizualna",
-      "text": "Projekt identyfikacji wizualnej oraz etykiet serii specjalnej piw leżakowanych w beczkach dla browaru kontraktowego Browanza.",
-      "imagesMin": ["/images/browanza/miniatury.png"],
-      "images": [
-        "/images/browanza/wiz2.png",
-        "/images/browanza/wiz3.png",
-        "/images/browanza/wiz4.png",
-        "/images/browanza/wiz5.png",
-        "/images/browanza/wiz6.jpg",
-        "/images/browanza/wiz7.jpg",
-        "/images/browanza/wiz8.jpg",
-        "/images/browanza/wiz9.png",
-        "/images/browanza/wiz10.png",
-        "/images/browanza/wiz11.png",
-        "/images/browanza/wiz12.jpg",
-        "/images/browanza/wiz13.jpg",
-        "/images/browanza/wiz14.png"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 10,
       "title": "Amway Nutralite",
       "description": "social media",
       "text": "Projekt grafik social media dla suplementów diety marki Amway.",
@@ -176,26 +151,7 @@
       "lastProject": false
     },
     {
-      "id": 11,
-      "title": "William Peel",
-      "description": "landing page",
-      "text": "Projekt strony internetowej  aktywacji Hit the Stage dla marki William Peel.",
-      "imagesMin": ["/images/WP/miniatury.png"],
-      "images": [
-        "/images/WP/WP1.png",
-        "/images/WP/WP2.png",
-        "/images/WP/WP3.png",
-        "/images/WP/WP4.png",
-        "/images/WP/WP5.png",
-        "/images/WP/WP6.png",
-        "/images/WP/WP7.png",
-        "/images/WP/WP8.png"
-      ],
-      "videos": [],
-      "lastProject": false
-    },
-    {
-      "id": 12,
+      "id": 10,
       "title": "Chatbot Universe",
       "description": "landing page",
       "text": "Projekt strony internetowej wykonany dla narzędzi marketingowych - chatbotów.",
@@ -212,28 +168,99 @@
       "lastProject": false
     },
     {
-      "id": 13,
-      "title": "Capitan Jack",
-      "description": "kampania digital",
-      "text": "Projekt strony internetowej do aktywacji On Trade oraz materiałów do social media do aktywacji Karaiby dla marki Capitan Jack.",
-      "imagesMin": ["/images/cj/CJminiatury.png"],
+      "id": 11,
+      "title": "Eduneo",
+      "description": "kampania digital, materiały wewnętrzne",
+      "text": "Projekt strony sprzedażowej, roll-up, grafik do social media oraz papieru firmowego dla platformy Eduneo.",
+      "imagesMin": ["/images/vod/vod_miniatury.png"],
       "images": [
-        "/images/cj/2.jpg",
-        "/images/cj/3.jpg",
-        "/images/cj/4.jpg",
-        "/images/cj/5.jpg",
-        "/images/cj/6.jpg"
-
+        "/images/vod/www_wiz_1.png",
+        "/images/vod/www_wiz_2.png",
+        "/images/vod/www_wiz_3.png",
+        "/images/vod/www_wiz_4.png",
+        "/images/vod/www_wiz_5.png",
+        "/images/vod/www_wiz_6.png",
+        "/images/vod/www_wiz_7.png",
+        "/images/vod/8.png",
+        "/images/vod/9.png"
       ],
-      "videos": [
-        "/images/cj/7.mp4",
-        "/images/cj/8.mp4",
-        "/images/cj/9.mp4"
+      "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 12,
+      "title": "Edrone",
+      "description": "landing page",
+      "text": "Projekt strony internetowej wykonany na podstawie prezentacji dla systemu CRM",
+      "imagesMin": ["/images/edrone/miniatura-edrone.png"],
+      "images": [
+        "/images/edrone/1_edrone.png",
+        "/images/edrone/2_edrone.png",
+        "/images/edrone/3_edrone.png",
+        "/images/edrone/4_edrone.png",
+        "/images/edrone/5_edrone.png",
+        "/images/edrone/6_edrone.png",
+        "/images/edrone/7_edrone.png"
       ],
+      "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 13,
+      "title": "Browanza",
+      "description": "identyfikacja wizualna",
+      "text": "Projekt identyfikacji wizualnej oraz etykiet serii specjalnej piw leżakowanych w beczkach dla browaru kontraktowego Browanza.",
+      "imagesMin": ["/images/browanza/miniatury.png"],
+      "images": [
+        "/images/browanza/wiz2.png",
+        "/images/browanza/wiz3.png",
+        "/images/browanza/wiz4.png",
+        "/images/browanza/wiz5.png",
+        "/images/browanza/wiz6.png",
+        "/images/browanza/wiz7.png",
+        "/images/browanza/wiz8.png",
+        "/images/browanza/wiz9.png",
+        "/images/browanza/wiz10.png",
+        "/images/browanza/wiz11.png",
+        "/images/browanza/wiz12.png"
+      ],
+      "videos": [],
       "lastProject": false
     },
     {
       "id": 14,
+      "title": "Browanza",
+      "description": "projekt etykiet",
+      "text": "Projekt etykiet serii specjalnej piw leżakowanych w beczkach dla browaru kontraktowego Browanza",
+      "imagesMin": ["/images/browanza2/miniatury-browanza.jpg"],
+      "images": [
+        "/images/browanza2/wiz1.jpg",
+        "/images/browanza2/wiz2.jpg",
+        "/images/browanza2/wiz3.jpg",
+        "/images/browanza2/wiz4.jpg",
+        "/images/browanza2/wiz5.jpg",
+        "/images/browanza2/wiz6.jpg"
+      ],
+      "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 15,
+      "title": "Piwo-War",
+      "description": "projekt produktu",
+      "text": "Projekt zestawu naczyń do domowej produkcji piwa.",
+      "imagesMin": ["/images/piwowarstwo/piwowarstwo-miniatury.png"],
+      "images": [
+        "/images/piwowarstwo/piwowarstwo_1.png",
+        "/images/piwowarstwo/piwowarstwo_2.png",
+        "/images/piwowarstwo/piwowarstwo_3.png",
+        "/images/piwowarstwo/piwowarstwo_4.png"
+      ],
+      "videos": [],
+      "lastProject": false
+    },
+    {
+      "id": 16,
       "title": "logofolio",
       "description": "",
       "text": "",
@@ -244,8 +271,7 @@
         "/images/logofolio/logofolio3.png",
         "/images/logofolio/logofolio4.png",
         "/images/logofolio/logofolio5.png",
-        "/images/logofolio/logofolio6.png",
-        "/images/logofolio/logofolio7.png"
+        "/images/logofolio/logofolio6.png"
 
       ],
       "videos": [],

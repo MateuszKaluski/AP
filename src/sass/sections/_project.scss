@@ -4,25 +4,28 @@
     .project__description {
         margin-bottom: $margin-bottom;
         font-weight: 400;
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         .project__title{
             // border-top: 2px solid black;
-
-
-            font-size: 1.4rem;
+            font-size: 2rem;
             font-weight: 500;
         }
-        .project__text{
+        .project__text {
             // border-top: 2px solid red;
 
             margin-top:16px;
             // line-height: 1.2rem;
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             font-weight: 500;
+            line-height: 1.4rem;
         }
         .project__img, .project__video {
             margin-bottom: 5vh;
         }
+        // .project__img  {
+        //     margin-bottom: 5vh;
+        // }
+
     }
     // .project__description {
     //     line-height: 1.1rem;
@@ -40,7 +43,7 @@
     background-color: #ffffffd8;
    .navBottom__bar{
        font-size: 1.4rem;
-       font-weight: 400;
+       font-weight: 500;
        height: 10vh;
 
         display: flex;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 // sekcja 2
 class Projects extends Component {
@@ -21,14 +21,14 @@ class Projects extends Component {
             <div className='item' key={p.id}>
                 <div className='item__foto'>
                     <Link className='item__link' to={`/projects/${p.id}`}>
-                    <img src={p.imagesMin[0]} />
+                        <img src={p.imagesMin[0]} />
                     </Link>
                 </div>
                 <div className='item__text'>
                     <Link className='item__link' to={`/projects/${p.id}`}>
                         <ul className='wrapp'>
-                        <li className='item__title' >{p.title}</li>
-                        <li className='item__description' >{p.description}</li>
+                            <li className='item__title' >{p.title}</li>
+                            <li className='item__description' >{p.description}</li>
                         </ul>
                     </Link>
                 </div>

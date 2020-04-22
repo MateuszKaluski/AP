@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 
-class Footer extends Component {
+const Footer = () => {
+// class Footer extends Component {
 
-    render() {
+//     render() {
 
         return (
             <>
+            <div className="page">
                 <footer className='footer'>
                     <div className='container'>
                         <div className='row'>
@@ -49,41 +51,15 @@ class Footer extends Component {
                                             <div className='data__textLight'>32-052 Radziszów</div>
                                         </div>
                                         </div>
-
-
-
-                                    {/* <div className='data__textLightLeftBox'>
-
-                                        <div className='data__textLight'>NIP:</div>
-                                        <div className='data__textLight'>REGON:</div>
-
-                                        <div className='data__textLight'>Tel:</div>
-                                        <div className='data__textLight'>Mail:</div>
-
-                                        <div className='data__textLight'>Adres:</div>
-                                        <div className='data__textLight'></div>
-                                    </div>
-                                    <div className='data__textLightRightBox'>
-                                        <div className='data__textLight'>9442265881</div>
-                                        <div className='data__textLight'>384672584</div>
-
-                                        <div className='data__textLight'>889683275</div>
-                                        <div className='data__textLight'>polek.aleksandra@gmail.com</div>
-
-                                        <div className='data__textLight'>ul.Zimnowiec 24</div>
-                                        <div className='data__textLight'>32-052 Radziszów</div>
-                                    </div> */}
-
-
-                                    {/*  */}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </footer>
+            </div>
             </>
         )
-    }
+    // }
 }
 
 export default Footer;

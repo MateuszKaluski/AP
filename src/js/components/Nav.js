@@ -1,107 +1,31 @@
 import React, { Component, useState, useEffect } from "react";
-// import React, { Component } from "react";
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Spring } from 'react-spring';
 
 import Nav__ItemProjectsRS from '../components/Nav__ItemProjectsRS';
 
-// const [state, setState] = useState({
-//     initial: false,
-//     clicked: null,
-//     menuName: "Menu"
-//   })
-
-//   // Toggle menu
-//   const handleMenu = () => {
-//     disableMenu();
-//     if (state.initial === false) {
-//       setState({
-//         initial: null,
-//         clicked: true,
-//         menuName: "Close"
-//       });
-//       console.log(1);
-//     } else if (state.clicked === true) {
-//       setState({
-//         clicked: !state.clicked,
-//         menuName: "Menu"
-//       });
-//       console.log(2)
-//     } else if (state.clicked === false) {
-//       setState({
-//         clicked: !state.clicked,
-//         menuName: "Close"
-//       });
-//       console.log(3);
-//     }
-//   };
-
-
-    const handleClick = () => {
-    // handleClick() {
+class Nav extends Component {
+    state = {
+        display: false,
+    }
+    handleClick() {
 
         const nav = document.querySelector('.nav--is-hide');
         nav.style.display = 'none'
     }
-
-const Nav = () => {
-
-//
-// to dodajemy
-//
-
-const [state, setState] = useState({
-    initial: false,
-    clicked: null,
-    menuName: "Menu"
-  })
-
-// State of our button
-    const [disabled, setDisabled] = useState(false);
-
-  // Toggle menu
-  const handleMenu = () => {
-    disableMenu();
-    if (state.initial === false) {
-      setState({
-        initial: null,
-        clicked: true,
-        menuName: "Close"
-      });
-      console.log(1);
-    } else if (state.clicked === true) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Menu"
-      });
-      console.log(2)
-    } else if (state.clicked === false) {
-      setState({
-        clicked: !state.clicked,
-        menuName: "Close"
-      });
-      console.log(3);
+    handleClickContact = () => {
+        this.setState ({
+            display: !this.state.display,
+        })
     }
-  };
-
-//Determine if out menu button should be disabled
-    const disableMenu = () => {
-        setDisabled(!disabled);
-        setTimeout(() => {
-          setDisabled(false);
-        }, 1200);
-      };
-
-//
-// to wywalamy
-
-        // const contactStyle = {
-        //     display: this.state.display ? 'block' : 'none',
-        // }
-//
-
+    render() {
+        const contactStyle = {
+            display: this.state.display ? 'block' : 'none',
+        }
 
         return (
             <>
+            {/*  */}
                 <div className='nav--is-hide'>
                     <section className='nav'>
                         <div className='container'>
@@ -113,19 +37,16 @@ const [state, setState] = useState({
                                 </Link>
 
                                 </div>
-
-                                <div className='nav__exit-button'>
-                                    <img className='x-size' src="../images/loga/ix.png"
-                                    />
+                                    <div className='nav__exit-button'>
+                                        <img className='x-size' src="../images/loga/ix.png" onClick={this.handleClick} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className='row'>
-{/*  */}
+                                <div className='row'>
+
                                 <div className='col-4'>
-                                    <div
-                                     className='contact--is-hide'>
+                                    <div style={contactStyle} className='contact--is-hide'>
                                         <ul className='contact'>
-                                            <li className='contact__phone1'>
+                                            <li className='contact__phone'>
                                                 889 683 275
                                             </li>
                                             <li className='contact__mail'>
@@ -146,20 +67,9 @@ const [state, setState] = useState({
                                             </Link>
                                         </li>
                                         <li className='nav__item'>
-{/*  */}
-{/*  */}
-
-                                            <div
-                                            className='Menu'
-                                            // onClick={this.handleClickContact}
-                                            disabled={disabled}
-                                            onClick={handleMenu}
-                                            >
+                                            <div onClick={this.handleClickContact}>
                                                 kontakt
                                             </div>
-{/*  */}
-{/*  */}
-
                                         </li>
                                     </ul>
                                 </div>
@@ -170,9 +80,6 @@ const [state, setState] = useState({
             </>
         )
     }
-// }
-
-
-
+}
 
 export default Nav;

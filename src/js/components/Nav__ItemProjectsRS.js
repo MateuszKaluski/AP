@@ -1,22 +1,24 @@
-import React, { Component } from "react";
-import { Link, } from "react-scroll";
+// import React, { Component } from "react";
+// import { Link, } from "react-scroll";
 
-class Nav__ItemProjectsRS extends Component {
-    render() {
-        return (
+// class Nav__ItemProjectsRS extends Component {
+//     render() {
+//         return (
 
-            <Link
-            activeClass="active"
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-125}
-            duration={500}
-            >
-            projekty
-            </Link>
-        )
-    }
-}
+//             <Link
+//             activeClass="active"
+//             to="projects"
+//             spy={true}
+//             smooth={true}
+//             offset={-125}
+//             duration={500}
+//             >
+//             projekty
+//             </Link>
+//         )
+//     }
+// }
 
-export default Nav__ItemProjectsRS
+// export default Nav__ItemProjectsRS
+
+//  to mozemy wywalić

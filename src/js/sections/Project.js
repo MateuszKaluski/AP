@@ -44,42 +44,61 @@ class Project extends Component {
         const images = this.state.data.images.map((img, i) => <img className='project__img' key={i} src={img}></img>)
         //
         //
-        const videos = this.state.data.videos.map((video, i) => <video className='project__video' key={i} src={video} controls autoPlay loop height="700" width="1000" ></video>)
+        const videos = this.state.data.videos.map((video, i) =>
+        <video className='project__video' key={i}
+        src={video}
+        // controls
+        autoPlay
+        loop
+        // height="600"
+        width="1000"
+        >
+        </video>)
         //
         // <video src="/images/amway artistry/AA1.mp4" controls autoPlay loop height="300" width="400">
         // </video>
         //
-        //
 
         return (
             <>
-                <HeaderSubpage />
-                <NavSubpages />
-                <div className='container'>
-                    <section className='project'>
-                        <div className='project__description'>
-                            <div className='row '>
-                                <div className='col-6'>
-                                    <p className='project__title'>{this.state.data.title}</p>
-                                    <p className='project__description'>{this.state.data.description}</p>
+            <div className='preloader'>
+                <div className='preloader__left-side'></div>
+                <div className='preloader__right-side'></div>
+
+
+                    <HeaderSubpage />
+                    <NavSubpages />
+                    <div className='container'>
+                        <section className='project'>
+
+                        {/* <div className="page"> */}
+                            <div className='project__description'>
+                                <div className='row '>
+                                    <div className='col-6'>
+                                        <p className='project__title'>{this.state.data.title}</p>
+                                        <p className='project__description'>{this.state.data.description}</p>
+                                    </div>
+                                    <div className='col-6'>
+                                        <p className='project__text'>{this.state.data.text}</p>
+                                    </div>
                                 </div>
-                                <div className='col-6'>
-                                    <p className='project__text'>{this.state.data.text}</p>
+                                <div className='row col-12 '>
+                                    <div className='project__videos' >{videos}</div>
                                 </div>
+                                <div className='row col-12 '>
+                                    <div className='project__foto' >{images}</div>
+                                    {/* <div className='project__video' >{videos}</div> */}
+                                </div>
+
                             </div>
-                            <div className='row col-12 '>
-                                <div className='project__foto' >{images}</div>
-                                {/* <div className='project__video' >{videos}</div> */}
-                            </div>
-                            <div className='row col-12 '>
-                                <div className='project__video' >{videos}</div>
-                            </div>
-                        </div>
-                    </section>
+                        {/* </div> */}
+
+                        </section>
+                    </div>
+                    <Footer />
+                    <NavBottom id={this.props.match.params.id} lastProject={this.props.match.params.lastProject} title={this.state.data.title} />
+                    <ProjectMarginBottom />
                 </div>
-                <Footer />
-                <NavBottom id={this.props.match.params.id} lastProject={this.props.match.params.lastProject} title={this.state.data.title} />
-                <ProjectMarginBottom />
             </>
         )
     }
@@ -90,11 +109,6 @@ class NavBottom extends Component {
     render() {
 
         const prev = this.props.id - 1;
-
-        // if (prev == 1) {
-        //     prev = this.props.id;
-        // }
-
         const next = Number(this.props.id) + 1;
 
         const title = this.props.title

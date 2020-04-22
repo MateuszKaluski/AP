@@ -6,6 +6,7 @@ class HeaderSubpage extends Component {
         const nav = document.querySelector('.nav--is-hide');
         nav.style.display = 'block'
     }
+
     render() {
 
         return (

@@ -5,7 +5,8 @@
 @import "settings/colors";
 
 @import "sections/header";
-// @import "sections/headerMax";
+@import "sections/test";
+
 @import "sections/headerSubpage";
 @import "sections/nav";
 @import "sections/navSubpages";
@@ -22,3 +23,90 @@ $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
 // @import '../../node_modules/font-awesome/css/font-awesome.min.css'
+
+// .page {
+//     position: absolute;
+//     // top: 100px;
+//     left: 0;
+//     right: 0;
+//   }
+
+//   /* simple - enter transition 300ms, exit 150ms */
+//   .fade-appear,
+//   .fade-enter {
+//       opacity: 0;
+//       z-index: 1;
+//   }
+//   .fade-appear-active,
+//   .fade-enter.fade-enter-active {
+//       opacity: 1;
+//       transition: opacity 1000ms linear 500ms;
+//   }
+
+//   .fade-exit {
+//       opacity: 1;
+//   }
+
+//   .fade-exit.fade-exit-active {
+//       opacity: 0;
+//       transition: opacity 0ms linear;
+//   }
+
+
+
+//   animacja
+.preloader {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    height: 100%;
+    position: absolute;
+
+    .preloader__left-side {
+        z-index: 1000;
+        height: 100%;
+
+        position: fixed;
+        left: 0;
+        right: 100%;
+
+        background-color: #d13b33;
+
+        animation-name: LS;
+        animation-fill-mode: backwards;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-timing-function:ease-out;
+    }
+    .preloader__right-side {
+        z-index: 1000;
+        height: 100%;
+        width: 50%;
+
+        position: fixed;
+        right: 0;
+
+        background-color: #d13b33;
+
+        animation-name: RS;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        animation-duration: 0.5s;
+        animation-iteration-count: 1;
+        animation-timing-function:ease-out;
+
+    }
+}
+
+@keyframes LS {
+    0% { left: 0; right: 50%;}
+    100% {left: 0; right: 100%;}
+    }
+
+@keyframes RS {
+    0% { left: 50%; right: 0;}
+    100% {left: 100%; right: 0;}
+    }

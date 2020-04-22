@@ -10,15 +10,11 @@ class NavSubpages extends Component {
         const nav = document.querySelector('.nav--is-hide');
         nav.style.display = 'none'
     }
-    //
-    //
     handleClickContact = () => {
         this.setState ({
             display: !this.state.display,
         })
     }
-    //
-    //
     render() {
         const contactStyle = {
             display: this.state.display ? 'block' : 'none',
@@ -31,6 +27,7 @@ class NavSubpages extends Component {
                         <div className='container'>
                             <div className='row'>
                                 <div className='nav__logo col-3'>
+
                                 <Link className='logo-subpage' to={`/#`}>
                                     <img className='logo-size' src="../images/loga/6s.png" />
                                 </Link>

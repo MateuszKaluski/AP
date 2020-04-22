@@ -1,21 +1,19 @@
-.nav--is-hide {
-    display: none;
-}
-
-//  to moze byc razem
-.contact--is-hide {
-    display: none;
-}
-
+// .nav--is-hide, .contact--is-hide {
+//     display: none;
+// }
 
 .nav {
+
     z-index:5;
-    position: fixed;
+    // position: fixed;
     top:0;
     left:0;
+    // transform: translateX();
 
     width: 100%;
     height: 100vh;
+
+    overflow: hidden;
     background-color: $background-color2;
 
     .nav__logo{
