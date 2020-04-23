@@ -1,25 +1,15 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import ProjectTitle from '../sections/ProjectTitle';
-import {useHistory} from "react-router-dom";
-
+import { Link } from 'react-router-dom'
 export default function NavBottom(props) {
-    const [count,
-        setcount] = useState(props.id);
-    const history = useHistory();
 
-    function handleClick(e) {
-        if (e === 'up') {
-            setcount(count + 1)
-            if (count === 16) 
-                setcount(1)
-        } else if (e === 'down') {
-            setcount(count - 1)
-            if (count === 1) 
-                setcount(16)
-        }
-        if (location.hash.startsWith('#/')) {
-            history.push(location.hash.replace('#', ''));
-            history.push(`${count}`)
+    function location(arrow) {
+        if (arrow === 'next') {
+            if (props.id === 16) return `1`
+            else return `${props.id + 1}`
+        } else {
+            if (props.id === 1) return `16`
+            else return `${props.id - 1}`
         }
     }
     const title = props.title
@@ -29,9 +19,9 @@ export default function NavBottom(props) {
                 <div className='row '>
                     <div className='col-12'>
                         <div className='navBottom__bar'>
-                            <div className='navBottom__prev' onClick={() => handleClick('down')}><img className='arrow-size' src="../images/loga/arrow.png"/></div>
-                            <ProjectTitle className='navBottom__link' title={title}/>
-                            <div className='navBottom__next' onClick={() => handleClick('up')}><img className='arrow-size' src="../images/loga/arrow.png"/></div>
+                            <Link className='navBottom__prev' to={location('prev')}><img className='arrow-size' src="../images/loga/arrow.png" /></Link>
+                            <ProjectTitle className='navBottom__link' title={title} />
+                            <Link className='navBottom__next' to={location('next')}><img className='arrow-size' src="../images/loga/arrow.png" /></Link>
                         </div>
                     </div>
                 </div>
