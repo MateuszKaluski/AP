@@ -9,7 +9,6 @@ class Header extends Component {
     }
 
     render() {
-
         return (
             <>
                 <header className='header3'>
@@ -27,7 +26,6 @@ class Header extends Component {
                                     <img className='logo-size' src="../images/loga/3s.png" />
                                 </Link>
                             </div>
-
                             <div className='header__nav col-9'>
                                 <img className='burger-size' src="../images/loga/burger.png" onClick={this.handleClick} />
                             </div>

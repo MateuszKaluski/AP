@@ -4,10 +4,9 @@ import { Link } from "react-router-dom";
 class NavTest__LinkToAbout extends Component {
     render() {
         return (
-
-        <Link to="/about" >
-            o mnie
-        </Link>
+            <Link to="/about" >
+                o mnie
+            </Link>
         )
     }
 }

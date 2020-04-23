@@ -1,7 +1,5 @@
-import React, { Component } from "react";
-import { Link } from 'react-router-dom'
-
-// sekcja 2
+import React, { Component, Fragment } from "react";
+import { Link } from 'react-router-dom';
 class Projects extends Component {
     state = {
         data: []
@@ -13,12 +11,10 @@ class Projects extends Component {
                 this.setState({
                     data: data,
                 })
-                console.log(this.state.data)
             })
     }
     render() {
         const listProjects = this.state.data.map(p => (
-
             <div className='item' key={p.id}>
                 <div className='item__foto'>
                     <Link className='item__link' to={`/projects/${p.id}`}>
@@ -37,8 +33,8 @@ class Projects extends Component {
 
         ))
         return (
-            <>
-                <section className='projects'>
+            <Fragment>
+             <section className='projects'>
                     <div className='container'>
                         <div className='row'>
                             <div className='col-12'>
@@ -49,7 +45,7 @@ class Projects extends Component {
                         </div>
                     </div>
                 </section>
-            </>
+            </Fragment>
         )
     }
 }

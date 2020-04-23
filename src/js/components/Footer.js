@@ -1,12 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 const Footer = () => {
-// class Footer extends Component {
-
-//     render() {
-
-        return (
-            <>
+    return (
+        <Fragment>
             <div className="page">
                 <footer className='footer'>
                     <div className='container'>
@@ -17,9 +13,7 @@ const Footer = () => {
                                     <div className='data__textBold'>Aleksandra Polek Nice Studio</div>
                                 </div>
                                 <div className='data__textLightContainer'>
-                                    {/*  */}
-
-                                        <div className='textLight__col col-4'>
+                                    <div className='textLight__col col-4'>
                                         <div className='data__textLightLeftBox'>
                                             <div className='data__textLight'>NIP:</div>
                                             <div className='data__textLight'>REGON:</div>
@@ -28,9 +22,9 @@ const Footer = () => {
                                             <div className='data__textLight'>9442265881</div>
                                             <div className='data__textLight'>384672584</div>
                                         </div>
-                                        </div>
+                                    </div>
 
-                                        <div className='textLight__col col-4'>
+                                    <div className='textLight__col col-4'>
                                         <div className='data__textLightLeftBox'>
                                             <div className='data__textLight'>Tel:</div>
                                             <div className='data__textLight'>Mail:</div>
@@ -39,9 +33,9 @@ const Footer = () => {
                                             <div className='data__textLight'>889683275</div>
                                             <div className='data__textLight'>polek.aleksandra@gmail.com</div>
                                         </div>
-                                        </div>
+                                    </div>
 
-                                        <div className='textLight__col col-4'>
+                                    <div className='textLight__col col-4'>
                                         <div className='data__textLightLeftBox'>
                                             <div className='data__textLight'>Adres:</div>
                                             <div className='data__textLight'></div>
@@ -50,16 +44,15 @@ const Footer = () => {
                                             <div className='data__textLight'>ul.Zimnowiec 24</div>
                                             <div className='data__textLight'>32-052 Radziszów</div>
                                         </div>
-                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </footer>
             </div>
-            </>
-        )
-    // }
+        </Fragment>
+    )
 }
 
 export default Footer;

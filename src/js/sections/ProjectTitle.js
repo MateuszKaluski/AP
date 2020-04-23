@@ -5,7 +5,6 @@ class ProjectTitle extends Component {
     render() {
         const title = this.props.title
         return (
-
             <Link className='navBottom__link'
                 activeClass="active"
                 to="project"
