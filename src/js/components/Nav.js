@@ -1,7 +1,5 @@
 import React, { Component, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Spring } from 'react-spring';
-
 import Nav__ItemProjectsRS from '../components/Nav__ItemProjectsRS';
 
 class Nav extends Component {

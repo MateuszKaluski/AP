@@ -1,14 +1,10 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 
-class NavTest__LinkToHome extends Component {
-    render() {
-        return (
-            <Link className='logo' to={`/#`}>
-                <img className='logo-size' src="../images/loga/6s.png"/>
-            </Link>
-        )
-    }
-}
+export const NavTest__LinkToHome = () => (
+    <Link className='logo' to={`/#`}>
+        <img className='logo-size' src="../images/loga/6s.png" />
+    </Link>
+)
 
-export default NavTest__LinkToHome
+
