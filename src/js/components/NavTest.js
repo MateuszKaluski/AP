@@ -1,8 +1,8 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 import React, { useState, Fragment } from "react";
 import { useSpring, animated } from 'react-spring';
-import NavTest__LinkToHome from './NavTest__LinkToHome';
-import NavTest__LinkToAbout from './NavTest__LinkToAbout';
+import {NavTest__LinkToHome} from './NavTest__LinkToHome';
+import {NavTest__LinkToAbout} from './NavTest__LinkToAbout';
 
 const NavTest = () => {
 
