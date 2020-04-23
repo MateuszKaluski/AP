@@ -1,8 +1,8 @@
 import { Link, animateScroll as scroll } from "react-scroll";
 import React, { useState, Fragment } from "react";
 import { useSpring, animated } from 'react-spring';
-import {NavTest__LinkToHome} from './NavTest__LinkToHome';
-import {NavTest__LinkToAbout} from './NavTest__LinkToAbout';
+import { NavTest__LinkToHome } from './NavTest__LinkToHome';
+import { NavTest__LinkToAbout } from './NavTest__LinkToAbout';
 
 const NavTest = () => {
 
@@ -13,8 +13,7 @@ const NavTest = () => {
             ? 1000
             : 0
     });
-    const [isDisplay,
-        setDisplay] = useState(false);
+    const [isDisplay, setDisplay] = useState(false);
     const leftFade = useSpring({
         display: isDisplay
             ? 'block'
@@ -62,8 +61,8 @@ const NavTest = () => {
                                 <div className='row'>
                                     <div className='col-4'>
 
-                                        <animated.div className="contact" style={leftFade}>
-                                            <ul >
+                                        <div className={isDisplay ? 'openContact' : 'closeContact'}>
+                                            <ul>
                                                 <li className='contact__phone'>
                                                     889 683 275
                                                 </li>
@@ -71,7 +70,7 @@ const NavTest = () => {
                                                     polek.aleksandra@gmail.com
                                                 </li>
                                             </ul>
-                                        </animated.div>
+                                        </div>
                                     </div>
                                     <div className='col-8'>
                                         <ul className='nav__menu'>
