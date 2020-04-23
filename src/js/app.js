@@ -61,7 +61,7 @@ class App extends Component {
     render() {
 
         return (
-        <BrowserRouter>
+        <HashRouter>
         <Route render={({location}) => (
                 <TransitionGroup>
                     <CSSTransition
@@ -80,7 +80,7 @@ class App extends Component {
                     </CSSTransition>
                 </TransitionGroup>
                 )} />
-        </BrowserRouter>
+        </HashRouter>
         )
     }
 }

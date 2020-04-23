@@ -5,7 +5,7 @@ class NavTest__LinkToHome extends Component {
     render() {
         return (
 
-        <Link className='logo' to={`/#`} activeClassName="active">
+        <Link className='logo' to={`/#`} >
             <img className='logo-size' src="../images/loga/6s.png" />
         </Link>
         )

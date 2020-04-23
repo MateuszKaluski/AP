@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import { Link, } from 'react-router-dom';
-
+import { useHistory } from "react-router-dom";
 import HeaderSubpage from './HeaderSubpage';
 import ProjectTitle from './ProjectTitle';
 
@@ -11,17 +11,47 @@ import ProjectMarginBottom from '../components/ProjectMarginBottom';
 class Project extends Component {
     state = {
         data: null,
+        images: [],
+        videos: []
     }
     load = () => {
         fetch("https://api.nice-studio.pl/projects/" + this.props.match.params.id)
             .then(resp => resp.json())
             .then(data => {
-                this.setState({
-                    data: data,
-                })
-                console.log(data)
+
+                if (data && data.length) {
+                    this.setState({
+                        data: data[0],
+                    })
+                    console.log(data)
+                    this.patchState(data[0])
+                    console.log({
+                        vid: this.state.videos,
+                        img: this.state.images
+                    })
+                }
             })
     }
+
+    patchState(data) {
+        console.log(data);
+        const images = data.images.length ? data.images.map((img, i) => <img className='project__img' key={i} src={img}></img>) : null
+        const videos = data.videos ? data.videos.map((video, i) =>
+            <video className='project__video' key={i}
+                src={video}
+                autoPlay
+                loop
+                width="1000"
+            >
+            </video>) : null;
+        this.setState(
+            {
+                images,
+                videos
+            }
+        )
+    }
+
     componentDidMount() {
         this.load()
     }
@@ -36,35 +66,14 @@ class Project extends Component {
 
     }
     render() {
-        if (this.state.data === null || !this.state.data) {
-            return (
-                null
-            )
+        if (!this.state.data) {
+            return null;
         }
-
-        const images = this.state.data.images.map((img, i) => <img className='project__img' key={i} src={img}></img>)
-        //
-        //
-        const videos = this.state.data.videos.map((video, i) =>
-        <video className='project__video' key={i}
-        src={video}
-        // controls
-        autoPlay
-        loop
-        // height="600"
-        width="1000"
-        >
-        </video>)
-        //
-        // <video src="/images/amway artistry/AA1.mp4" controls autoPlay loop height="300" width="400">
-        // </video>
-        //
-
         return (
             <>
-            <div className='preloader'>
-                <div className='preloader__left-side'></div>
-                <div className='preloader__right-side'></div>
+                <div className='preloader'>
+                    <div className='preloader__left-side'></div>
+                    <div className='preloader__right-side'></div>
 
 
                     <HeaderSubpage />
@@ -72,7 +81,7 @@ class Project extends Component {
                     <div className='container'>
                         <section className='project'>
 
-                        {/* <div className="page"> */}
+                            {/* <div className="page"> */}
                             <div className='project__description'>
                                 <div className='row '>
                                     <div className='col-6'>
@@ -84,52 +93,72 @@ class Project extends Component {
                                     </div>
                                 </div>
                                 <div className='row col-12 '>
-                                    <div className='project__videos' >{videos}</div>
+                                    <div className='project__videos' >{this.state.videos}</div>
                                 </div>
                                 <div className='row col-12 '>
-                                    <div className='project__foto' >{images}</div>
+                                    <div className='project__foto' >{this.state.images}</div>
                                     {/* <div className='project__video' >{videos}</div> */}
                                 </div>
 
                             </div>
-                        {/* </div> */}
+                            {/* </div> */}
 
                         </section>
                     </div>
                     <Footer />
-                    <NavBottom id={this.props.match.params.id} lastProject={this.props.match.params.lastProject} title={this.state.data.title} />
+                    <NavBottom id={this.state.data.id} lastProject={this.props.match.params.lastProject} title={this.state.data.title} />
                     <ProjectMarginBottom />
                 </div>
             </>
         )
+
     }
+
+
 }
 
-class NavBottom extends Component {
 
-    render() {
 
-        const prev = this.props.id - 1;
-        const next = Number(this.props.id) + 1;
 
-        const title = this.props.title
-        return (
-            <div className='navBottom'>
-                <div className='container'>
-                    <div className='row '>
-                        <div className='col-12'>
-                            <div className='navBottom__bar'>
-                                <Link className='navBottom__prev' to={`/projects/${prev}`}><img className='arrow-size' src="../images/loga/arrow.png" /></Link>
-                                <ProjectTitle className='navBottom__link' title={title} />
-                                <Link className='navBottom__next' to={`/projects/${next}`}><img className='arrow-size' src="../images/loga/arrow.png" /></Link>
-                            </div>
+export function NavBottom(props) {
+    console.log(props)
+    const [count, setcount] = useState(props.id)
+    const history = useHistory();
+
+
+
+    function handleClick(e) {
+        if (e === 'up') {
+            setcount(count + 1)
+            if (count === 16) setcount(1)
+        } else if (e === 'down') {
+            setcount(count - 1)
+            if (count === 1) setcount(16)
+        }
+        if (location.hash.startsWith('#/')) {
+            history.push(location.hash.replace('#', ''));
+            history.push(`${count}`)
+        }
+    }
+    const title = props.title
+    return (
+        <div className='navBottom'>
+            <div className='container'>
+                <div className='row '>
+                    <div className='col-12'>
+                        <div className='navBottom__bar'>
+                            <div className='navBottom__prev' onClick={() => handleClick('down')}><img className='arrow-size' src="../images/loga/arrow.png" /></div>
+                            <ProjectTitle className='navBottom__link' title={title} />
+                            <div className='navBottom__next' onClick={() => handleClick('up')} ><img className='arrow-size' src="../images/loga/arrow.png" /></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-        )
-    }
+        </div>
+    )
 }
+
+
+
 
 export default Project

@@ -5,7 +5,7 @@ class NavTest__LinkToAbout extends Component {
     render() {
         return (
 
-        <Link to="/about" activeClassName="active">
+        <Link to="/about" >
             o mnie
         </Link>
         )
