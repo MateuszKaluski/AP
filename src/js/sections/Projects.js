@@ -30,11 +30,10 @@ class Projects extends Component {
                     </Link>
                 </div>
             </div>
-
         ))
         return (
             <Fragment>
-             <section className='projects'>
+                <section className='projects'>
                     <div className='container'>
                         <div className='row'>
                             <div className='col-12'>
