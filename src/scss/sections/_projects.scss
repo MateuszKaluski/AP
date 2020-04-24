@@ -1,0 +1,76 @@
+.projects {
+    width: 100%;
+    display: flex;
+    margin-top: 14vh;
+}
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width:100%;
+    margin-bottom: 55px;
+    .item {
+        position: relative;
+        width:32.5%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 41px;
+        background: transparent;
+        // .item__foto {
+        //     width: 100%;
+        // };
+
+        .item__text {
+            // position: absolute;
+            // left: 0;
+            // bottom: -18%;
+            // height: 15%;
+            display: flex;
+            // flex-direction: column;
+
+            justify-content: left;
+            // font-size: 1.5rem;
+            // color: $text-color5;
+            // border: 5px solid blue;
+
+            .item__link {
+                text-decoration: none;
+                // color: $text-color5;
+            }
+            .item__link:hover {
+                .item__title, .item__description {
+                    border-bottom: 1px solid #ce2d24;
+                }
+            }
+            .wrapp {
+// to poprawić koniecznie!!
+//
+//
+                margin-top: 10px;
+                height: 47px;
+                width: 80%;
+                display: flex;
+                flex-wrap: wrap;
+
+                color: #ce2d24;
+            }
+
+            .item__title {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 20px;
+
+                    // color: $text-color5;
+            }
+            .item__description {
+                    font-weight: 400;
+                    font-size: 1.1rem;
+                    line-height: 20px;
+                    // color: $text-color5;
+            }
+        }
+
+    }
+
+}
+
