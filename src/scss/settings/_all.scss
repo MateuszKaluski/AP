@@ -1,11 +1,32 @@
 @import "./colors";
-@import url('https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap&subset=latin-ext');
-
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Text:400,500,700&display=swap&subset=latin-ext");
 
 body {
-    font-family: 'Red Hat Text', sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     background-color: $background-color;
     color: $text-color5;
 }
+@mixin respond($breakpoint) {
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 56.25em) {
+            @content;
+        } //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (min-width: 75em) {
+            @content;
+        } //1200px
+    }
 
-$margin-bottom: 55px;
+}
+html {
+    font-size: 50%;
+
+    @include respond(tab-port) {
+        font-size: 62.5%;
+    }
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+}

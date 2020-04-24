@@ -1,76 +1,134 @@
-// .nav--is-hide, .contact--is-hide {
-//     display: none;
-// }
-
 .nav {
-
-    z-index:5;
-    // position: fixed;
-    top:0;
-    left:0;
-    // transform: translateX();
-
     width: 100%;
-    height: 100vh;
-
-    overflow: hidden;
-    background-color: #ce2d24ee;
-
-    .nav__logo{
-        cursor: pointer;
+    position: fixed;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    &__list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(206, 45, 36, 0.918);
+        transition: height 0.26s ease-in;
         display: flex;
-        align-items: center;
-    }
-
-    .nav__exit-button {
+        // justify-content: ;
         width: 100%;
-        height: 10vh;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        color: #fff;
         font-size: 2rem;
-
-        text-align: right;
-
-        .x-size {
-            cursor: pointer;
-            height: 30%;
+    }
+    .listNav {
+        &__grid {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-auto-rows: min-content;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .item1,
+            .item2,
+            .item3,
+            .item4 {
+                width: 100%;
+                color: #fff;
+                a {
+                    display: block;
+                }
+            }
         }
     }
-    .nav__menu, .contact {
-        margin-top: 100px;
+    .ulClose {
+        height: 0;
 
-    }
-    .contact__phone1 {
-        margin-top: 305px;
-    }
-    .contact__phone1, .contact__mail {
-        text-align: start;
-        padding: 1% 0 1% 0%;
-
-        color: #fff;
-        line-height: 1.5rem;
-        font-size: 1.4rem;
-        font-weight: bold;
-
-    }
-    .nav__item {
-        text-align: start;
-
-        a, div {
-            color: #fff;
-            font-size: 4rem;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
+        .listNav__grid {
+            display: none;
         }
-        a:hover, div:hover {
-            color: #373737;
+    }
+    .ulOpen {
+        height: 100vh;
+    }
+
+    &__logo {
+        background-color: #fff;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            width: 13rem;
+            display: block;
+        }
+        img {
+            width: 100%;
         }
     }
 }
+.menuIconContainer {
+    transform: scale(0.7);
+    padding-right: 3rem;
+}
 
+#nav-icon3 {
+    transform: scale(0.6);
+    width: 60px;
+    height: 45px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
 
-
+#nav-icon3 span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+}
+#nav-icon3 span:nth-child(1) {
+    top: 0;
+}
+#nav-icon3 span:nth-child(2),
+#nav-icon3 span:nth-child(3) {
+    top: 18px;
+}
+#nav-icon3 span:nth-child(4) {
+    top: 36px;
+}
+#nav-icon3.open span:nth-child(1) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
+#nav-icon3.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#nav-icon3.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+#nav-icon3.open span:nth-child(4) {
+    top: 18px;
+    width: 0;
+    left: 50%;
+}
