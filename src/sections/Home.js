@@ -8,8 +8,7 @@ export const Home = () => (
             <div className='preloader__left-side'></div>
             <div className='preloader__right-side'></div>
 
-            <Projects/>
-            <Footer/>
+            
         </div>
     </Fragment>
 )

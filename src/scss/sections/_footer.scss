@@ -1,0 +1,47 @@
+.footer {
+    padding: 5rem 2rem 5rem 2rem;
+    background-color: rgba(206, 45, 36, 1);
+    color: #fff;
+    font-size: 2rem;
+    &__adressContainer {
+        padding-left: 2rem;
+        @include respond(tab-port) {
+            padding-top: 2rem;
+            display: flex;
+        }
+    }
+    &__headerText {
+        position: relative;
+        font-weight: bold;
+        font-size: 2.3rem;
+        &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 4rem;
+            height: 3px;
+            background-color: #fff;
+            top: -15px;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+    }
+    &__content {
+        padding: 2rem 0;
+
+        width: auto;
+        display: grid;
+        grid-template-columns: 9rem 1fr;
+        grid-auto-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        @include respond(tab-port) {
+            padding: 2rem 1rem;
+            grid-template-columns: auto 1fr;
+            .footer__text {
+                padding-left: 1rem;
+            }
+        }
+    }
+}
