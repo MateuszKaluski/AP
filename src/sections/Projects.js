@@ -8,40 +8,34 @@ class Projects extends Component {
         fetch("https://api.nice-studio.pl/projects/")
             .then(resp => resp.json())
             .then(data => {
-                this.setState({
-                    data: data,
-                })
+                this.setState({ data: data })
             })
     }
+    prepareProjects() {
+        return this
+            .state
+            .data
+            .map(p => (
+                <div className='projects__project' key={p.id}>
+                    <Link className='projects__linkWrapper' to={`/projects/${p.id}`}>
+                        <div className='projects__foto'>
+                            <img alt={p.title} src={p.imagesMin[0]} />
+                        </div>
+                        <div className='projects__projectHeader'>
+                            <h2 className='projects__header'>{p.title}</h2>
+                            <p className='projects__description'>{p.description}</p>
+                        </div>
+                    </Link>
+                </div>
+            ))
+    }
     render() {
-        const listProjects = this.state.data.map(p => (
-            <div className='item' key={p.id}>
-                <div className='item__foto'>
-                    <Link className='item__link' to={`/projects/${p.id}`}>
-                        <img alt={'project'} src={p.imagesMin[0]} />
-                    </Link>
-                </div>
-                <div className='item__text'>
-                    <Link className='item__link' to={`/projects/${p.id}`}>
-                        <ul className='wrapp'>
-                            <li className='item__title' >{p.title}</li>
-                            <li className='item__description' >{p.description}</li>
-                        </ul>
-                    </Link>
-                </div>
-            </div>
-        ))
+
         return (
             <Fragment>
                 <section className='projects'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col-12'>
-                                <div className='projects__list'>
-                                    {listProjects}
-                                </div>
-                            </div>
-                        </div>
+                    <div className='projects__container'>
+                        {this.prepareProjects()}
                     </div>
                 </section>
             </Fragment>
