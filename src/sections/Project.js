@@ -1,7 +1,4 @@
 import React, { Component, Fragment } from "react";
-import HeaderSubpage from './HeaderSubpage';
-import NavSubpages from '../components/NavSubpages';
-import { Footer } from '../components/Footer';
 import ProjectMarginBottom from '../components/ProjectMarginBottom';
 import NavBottom from '../components/NavBottom';
 export default class Project extends Component {
@@ -30,8 +27,6 @@ export default class Project extends Component {
                 <div className='preloader'>
                     <div className='preloader__left-side'></div>
                     <div className='preloader__right-side'></div>
-                    <HeaderSubpage />
-                    <NavSubpages />
                     <div className='container'>
                         <section className='project'>
                             <div className='project__description'>
@@ -53,9 +48,7 @@ export default class Project extends Component {
                             </div>
                         </section>
                     </div>
-                    <Footer />
                     <NavBottom id={id} title={title} />
-                    <ProjectMarginBottom />
                 </div>
             </Fragment>
         )

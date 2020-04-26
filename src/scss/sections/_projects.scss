@@ -10,20 +10,21 @@
         text-decoration: none;
     }
     &__project {
+        padding-bottom:2rem;
     }
     &__projectHeader {
-        padding-top: 2rem;
+        padding-top: 3rem;
     }
     &__header,
     &__description {
         color: rgba(206, 45, 36, 1);
-        text-transform: capitalize;
     }
     &__header {
+        text-transform: capitalize;
         font-size: 3rem;
     }
     &__description {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     &__linkWrapper {
         display: block;
