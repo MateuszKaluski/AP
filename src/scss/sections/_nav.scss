@@ -8,29 +8,46 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: rgba(206, 45, 36, 0.918);
+        background-color: rgba(206, 45, 36, 1);
         transition: height 0.26s ease-in;
         display: flex;
-        // justify-content: ;
         width: 100%;
         font-size: 2rem;
     }
     .listNav {
         &__grid {
+            padding-top: 6rem;
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-auto-rows: min-content;
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            grid-column-gap: 0;
+            grid-row-gap: 0;
             .item1,
             .item2,
             .item3,
             .item4 {
                 width: 100%;
-                color: #fff;
+                display: flex;
+
+                padding-left: 8rem;
+                .contactButton,
                 a {
+                    padding: 1rem 0;
+                    text-align: start;
+                    width: 100%;
                     display: block;
+                    color: #fff;
+                    font-size: 3rem;
+                    font-weight: bold;
+                }
+            }
+            .item4 {
+                padding-top: 1rem;
+                a {
+                    font-size: 2rem;
+                    padding: 0;
+                    text-decoration: none;
                 }
             }
         }

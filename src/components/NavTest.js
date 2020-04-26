@@ -58,21 +58,25 @@ export const NavTest = () => {
 
                                 <Link to="/about">
                                     o mnie
-                            </Link>
+                                </Link>
 
                             </div>
                             <div className="item3" onClick={() => setDisplay(!isDisplay)}>
-                                kontakt
+                                <span className="contactButton">kontakt</span>
                             </div>
 
-                            <div className={isDisplay ? 'item4 openContact' : 'item4 closeContact'}>
+                            <div
+                                className={isDisplay
+                                    ? 'item4 openContact'
+                                    : 'item4 closeContact'}>
                                 <ul>
-                                    <li className='contact__phone'>
-                                        889 683 275
-                                        </li>
+
                                     <li className='contact__mail'>
-                                        polek.aleksandra@gmail.com
-                                        </li>
+                                        <a href="mailto:polek.aleksandra@gmail.com">polek.aleksandra@gmail.com</a>
+                                    </li>
+                                    <li className='contact__phone'>
+                                        <a href="tel:+84889683275">889683275</a>
+                                    </li>
                                 </ul>
                             </div>
 
