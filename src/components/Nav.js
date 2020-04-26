@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import { NavTestLinkToHome } from './NavTestLinkToHome';
 import { NavTestLinkToAbout } from './NavTestLinkToAbout';
 
-export const NavTest = () => {
+export const Nav = () => {
 
     const [isToggled,
         setToggled] = useState(false);
@@ -28,7 +28,7 @@ export const NavTest = () => {
                             <img alt={'logo'} className='logo-size' src={require('../images/loga/2.png')} />
                         </Link>
                         <div onClick={() => setToggled(!isToggled)} className="menuIconContainer">
-                            <div id="nav-icon3">
+                            <div id="nav-icon3" className={!isToggled ? '' : 'open'}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
