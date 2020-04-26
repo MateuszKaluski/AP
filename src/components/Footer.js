@@ -1,56 +1,49 @@
-import React,{Fragment} from "react";
+import React, {Fragment} from "react";
 
 export const Footer = () => {
     return (
-        <Fragment>
-            <div className="page">
-                <footer className='footer'>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='company__data col-12'>
-                                <div className='data__textBoldContainer'>
-                                    <div className='data__textBold'>__</div>
-                                    <div className='data__textBold'>Aleksandra Polek Nice Studio</div>
-                                </div>
-                                <div className='data__textLightContainer'>
-                                    <div className='textLight__col col-4'>
-                                        <div className='data__textLightLeftBox'>
-                                            <div className='data__textLight'>NIP:</div>
-                                            <div className='data__textLight'>REGON:</div>
-                                        </div>
-                                        <div className='data__textLightRightBox'>
-                                            <div className='data__textLight'>9442265881</div>
-                                            <div className='data__textLight'>384672584</div>
-                                        </div>
-                                    </div>
 
-                                    <div className='textLight__col col-4'>
-                                        <div className='data__textLightLeftBox'>
-                                            <div className='data__textLight'>Tel:</div>
-                                            <div className='data__textLight'>Mail:</div>
-                                        </div>
-                                        <div className='data__textLightRightBox'>
-                                            <div className='data__textLight'>889683275</div>
-                                            <div className='data__textLight'>polek.aleksandra@gmail.com</div>
-                                        </div>
-                                    </div>
-
-                                    <div className='textLight__col col-4'>
-                                        <div className='data__textLightLeftBox'>
-                                            <div className='data__textLight'>Adres:</div>
-                                            <div className='data__textLight'></div>
-                                        </div>
-                                        <div className='data__textLightRightBox'>
-                                            <div className='data__textLight'>ul.Zimnowiec 24</div>
-                                            <div className='data__textLight'>32-052 Radziszów</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <footer className='footer'>
+            <div className='footer__container'>
+                <div className='footer__headerContainer'>
+                    <h2 className='footer__headerText'>Aleksandra Polek Nice Studio</h2>
+                </div>
+                <div className='footer__adressContainer'>
+                    <div className='footer__content'>
+                        <div className='footer__title'>
+                            <div className='footer__item'>NIP:</div>
+                            <div className='footer__item'>REGON:</div>
+                        </div>
+                        <div className='footer__text'>
+                            <div className='footer__item'>9442265881</div>
+                            <div className='footer__item'>384672584</div>
                         </div>
                     </div>
-                </footer>
+
+                    <div className='footer__content'>
+                        <div className='footer__title'>
+                            <div className='footer__item'>Tel:</div>
+                            <div className='footer__item'>Mail:</div>
+                        </div>
+                        <div className='footer__text'>
+                            <div className='footer__item'>889683275</div>
+                            <div className='footer__item'>polek.aleksandra@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div className='footer__content'>
+                        <div className='footer__title'>
+                            <div className='footer__item'>Adres:</div>
+                            <div className='footer__item'></div>
+                        </div>
+                        <div className='footer__text'>
+                            <div className='footer__item'>ul.Zimnowiec 24</div>
+                            <div className='footer__item'>32-052 Radziszów</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </Fragment>
+        </footer>
+
     )
 }
