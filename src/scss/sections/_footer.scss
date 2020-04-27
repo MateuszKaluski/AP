@@ -1,13 +1,17 @@
 .footer {
-    padding: 5rem 2rem 5rem 2rem;
+    padding: 5rem 2rem 10rem 2rem;
     background-color: rgba(206, 45, 36, 1);
     color: #fff;
     font-size: 2rem;
+    &__container{
+        width: 1200px;
+        margin: 0 auto;
+    }
     &__adressContainer {
         padding-left: 2rem;
         @include respond(tab-port) {
-            padding-top: 2rem;
             display: flex;
+            padding-top: 2rem;
         }
     }
     &__headerText {
@@ -24,9 +28,7 @@
             top: -15px;
         }
     }
-    &__title {
-        text-transform: uppercase;
-    }
+   
     &__content {
         padding: 2rem 0;
 
