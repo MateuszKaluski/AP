@@ -1,59 +1,51 @@
-import React, { Component, Fragment } from "react";
-import ProjectMarginBottom from '../components/ProjectMarginBottom';
+import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
-export default class Project extends Component {
+export default function Project({ id, title, description, text, videos, images }) {
 
-    getVideos(videos) {
+    const getVideos = (videos) => {
         if (videos && videos.length) {
             return videos.map((video, i) => (
-                <video className='project__video' alt={'project'} key={i} src={`https://nice-studio.pl${video}`} autoPlay loop width="1000"></video>
+                <div key={i} className='videoContainer'>
+                    <video className='project__video' alt={'project'} src={`https://nice-studio.pl${video}`} autoPlay loop width="1000"></video>
+                </div>
             ))
         }
         return null;
     }
-    getImages(images) {
+    const getImages = (images) => {
         if (images && images.length) {
             return images.map((img, i) => (
-                <img className='project__img' alt={'project'} key={i} src={`https://nice-studio.pl${img}`} />
+                <div key={i} className='imageContainer'>
+                    <img className='project__img' alt={'project'} src={`https://nice-studio.pl${img}`} />
+                </div>
             ));
         }
         return null;
     }
-    render() {
-        const { id, title, description, text, videos, images } = this.props;
-
-        return (
-            <Fragment>
-                <div className='preloader'>
-                    <div className='preloader__left-side'></div>
-                    <div className='preloader__right-side'></div>
-                    <div className='container'>
-                        <section className='project'>
-                            <div className='project__description'>
-                                <div className='row '>
-                                    <div className='col-6'>
-                                        <p className='project__title'>{title}</p>
-                                        <p className='project__description'>{description}</p>
-                                    </div>
-                                    <div className='col-6'>
-                                        <p className='project__text'>{text}</p>
-                                    </div>
-                                </div>
-                                <div className='row col-12 '>
-                                    <div className='project__videos'>{this.getVideos(videos)}</div>
-                                </div>
-                                <div className='row col-12 '>
-                                    <div className='project__foto'>{this.getImages(images)}</div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <NavBottom id={id} title={title} />
-                </div>
-            </Fragment>
-        )
+    const setColor = () => {
+        document.querySelector('#nav').style.backgroundColor = "red";
     }
+    setColor();
+    return (
+        <Fragment>
+            <div className='project'>
+                <section className='project__container'>
+                    <div className='project__description'>
+                        <p className='project__title'>{title}</p>
+                        <p className='project__description'>{description}</p>
+                        <p className='project__text'>{text}</p>
+                    </div>
+                    {getVideos(videos)}
+                    {getImages(images)}
+                </section>
+            </div>
+            <NavBottom id={id} title={title} />
+        </Fragment >
+    )
 }
+
+
+
 
 
 
