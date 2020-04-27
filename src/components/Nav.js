@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 import { NavTestLinkToHome } from './NavTestLinkToHome';
 import { NavTestLinkToAbout } from './NavTestLinkToAbout';
 
-export const Nav = () => {
+export const Nav = ({ color }) => {
 
     const [isToggled,
         setToggled] = useState(false);
@@ -14,7 +14,7 @@ export const Nav = () => {
 
     return (
         <Fragment>
-            <div className='nav'>
+            <div id="nav" className='nav' style={{ backgroundColor: color }}>
                 <div className='nav__container'>
                     <div className='nav__logo'>
                         <Link
