@@ -4,7 +4,7 @@
     z-index: 100000;
     top: 0;
     left: 0;
-    &__container{
+    &__container {
         width: 1200px;
         margin: 0 auto;
     }
@@ -68,7 +68,6 @@
     }
 
     &__logo {
-
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -89,7 +88,6 @@
     animation: fadeFromLeft 0.4s ease-out forwards;
 }
 .closeContact {
-
     animation: fadeToLeft 0.4s ease-out forwards;
 }
 @keyframes fadeFromLeft {
