@@ -1,10 +1,11 @@
 @import "./scss/general/reset";
 @import "./scss/general/configuration";
 @import "./scss/settings/all";
+@import "./scss/general/icons";
 @import "./scss/settings/colors";
 @import "./scss/sections/header";
 @import "./scss/sections/test";
-@import "./scss/sections/headerSubpage";
+@import "./scss/sections/navBottom";
 @import "./scss/sections/nav";
 @import "./scss/sections/navSubpages";
 @import "./scss/sections/projects";
@@ -80,33 +81,5 @@ $fa-font-path: "~font-awesome/fonts";
     100% {
         left: 100%;
         right: 0;
-    }
-}
-
-.openContact {
-    animation: fadeFromLeft .5s ease-out forwards;
-}
-.closeContact {
-    animation: fadeToLeft .5s ease-out forwards;
-}
-@keyframes fadeFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-@keyframes fadeToLeft {
-    from {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(-100%);
     }
 }
