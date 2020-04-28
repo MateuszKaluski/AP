@@ -8,8 +8,10 @@
         align-items: center;
         display: flex;
         padding: 2rem;
-        width: 1200px;
-        margin: 0 auto;
+        @include respond(tab-land) {
+            width: 1200px;
+            margin: 0 auto;
+        }
     }
     &__link {
         font-size: 3rem;
