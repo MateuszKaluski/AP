@@ -4,8 +4,21 @@ import { useSpring, animated } from 'react-spring';
 import { NavTestLinkToHome } from './NavTestLinkToHome';
 import { NavTestLinkToAbout } from './NavTestLinkToAbout';
 
-export const Nav = ({ color }) => {
+export const Nav = ({ color, src }) => {
+    const logo = (s) => {
+        if (s === 'project') {
+            return (<picture>
+                <source media="(min-width: 56.25em)" srcSet={require(!isToggled ? '../images/loga/6s.png' : '../images/loga/3s.png')}></source>
+                <img alt={'logo'} className='logo-size' src={require(!isToggled ? '../images/loga/5.png' : '../images/loga/2.png')} />
+            </picture>)
+        } else if (s === 'projects') {
+            return (<picture>
+                <source media="(min-width: 56.25em)" srcSet={require(isToggled ? '../images/loga/6s.png' : '../images/loga/3s.png')}></source>
+                <img alt={'logo'} className='logo-size' src={require(isToggled ? '../images/loga/5.png' : '../images/loga/2.png')} />
+            </picture>)
+        }
 
+    }
     const [isToggled,
         setToggled] = useState(false);
 
@@ -16,19 +29,19 @@ export const Nav = ({ color }) => {
         <Fragment>
             <div id="nav" className='nav' style={{ backgroundColor: color }}>
                 <div className='nav__container'>
-                    <div className='nav__logo'>
+                    <div className='nav__logo' style={{ backgroundColor: color }}>
                         <Link
-                            className='logo'
+                            className={isToggled ? 'logo openL' : 'logo ' }
                             activeClass="active"
                             to="projects"
                             spy={true}
                             smooth={true}
                             offset={-125}
                             duration={500}>
-                            <img alt={'logo'} className='logo-size' src={require('../images/loga/2.png')} />
+                            {logo(src)}
                         </Link>
-                        <div onClick={() => setToggled(!isToggled)} className="menuIconContainer">
-                            <div id="nav-icon3" className={!isToggled ? '' : 'open'}>
+                        <div onClick={() => setToggled(!isToggled)} className={isToggled ? 'menuIconContainer colorL' : 'menuIconContainer colorL'}>
+                            <div id="nav-icon3" className={!isToggled ? '' : 'open '}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -85,6 +98,6 @@ export const Nav = ({ color }) => {
                 </div>
 
             </div>
-        </Fragment>
+        </Fragment >
     )
 }
