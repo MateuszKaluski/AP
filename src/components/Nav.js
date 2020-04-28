@@ -31,7 +31,7 @@ export const Nav = ({ color, src }) => {
                 <div className='nav__container'>
                     <div className='nav__logo' style={{ backgroundColor: color }}>
                         <Link
-                            className={isToggled ? 'logo openL' : 'logo ' }
+                            className={isToggled ? 'logo openL' : 'logo '}
                             activeClass="active"
                             to="projects"
                             spy={true}
@@ -40,7 +40,7 @@ export const Nav = ({ color, src }) => {
                             duration={500}>
                             {logo(src)}
                         </Link>
-                        <div onClick={() => setToggled(!isToggled)} className={isToggled ? 'menuIconContainer colorL' : 'menuIconContainer colorL'}>
+                        <div onClick={() => setToggled(!isToggled)} className={isToggled ? 'menuIconContainer colorL' : src === '' ? 'menuIconContainer'}>
                             <div id="nav-icon3" className={!isToggled ? '' : 'open '}>
                                 <span></span>
                                 <span></span>
