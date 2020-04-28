@@ -1,19 +1,33 @@
 .projects {
-    
     &__container {
-        width: 1200px;
-        margin: 0 auto;
+       
         padding: 0 2rem;
         padding-top: 13rem;
         display: grid;
         grid-template-columns: 1fr;
         grid-auto-rows: auto;
+        @include respond(tab-port) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+        }
+        @include respond(tab-land) {
+            width: 1200px;
+            margin: 0 auto;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 2rem;
+        }
+    }
+    &__foto {
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     &__linkWrapper {
         text-decoration: none;
     }
     &__project {
-        padding-bottom:2rem;
+        padding-bottom: 2rem;
     }
     &__projectHeader {
         padding-top: 3rem;

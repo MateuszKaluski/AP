@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
+import { Nav } from "../components/Nav";
 export default function Project({ id, title, description, text, videos, images }) {
 
     const getVideos = (videos) => {
@@ -22,12 +23,11 @@ export default function Project({ id, title, description, text, videos, images }
         }
         return null;
     }
-    const setColor = () => {
-        document.querySelector('#nav').style.backgroundColor = "red";
-    }
-    setColor();
+
+
     return (
         <Fragment>
+            <Nav src="project" color={'rgba(206, 45, 36, 1)'}/>
             <div className='project'>
                 <section className='project__container'>
                     <div className='project__description'>

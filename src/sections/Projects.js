@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Link } from 'react-router-dom';
+import { Nav } from "../components/Nav";
 class Projects extends Component {
     state = {
         data: []
@@ -33,6 +34,7 @@ class Projects extends Component {
 
         return (
             <Fragment>
+                <Nav src="projects"/>
                 <section className='projects'>
                     <div className='projects__container'>
                         {this.prepareProjects()}
