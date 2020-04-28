@@ -3,7 +3,6 @@ import './app.scss'
 import { HashRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // Components
-import { Nav } from "./components/Nav";
 import { Footer } from './components/Footer';
 import { NotFound } from './sections/NotFound';
 import Projects from './sections/Projects';
@@ -12,7 +11,7 @@ import Project from './sections/Project'
 class App extends Component {
   state = {
     data: [],
-    navColor: ''
+
   }
   componentDidMount() {
     fetch("https://api.nice-studio.pl/projects/")
@@ -28,17 +27,15 @@ class App extends Component {
       </Route>
     ))
   }
-  getNavColor = (color) => {
 
-  }
   render() {
-    const { data, navColor } = this.state;
+    const { data } = this.state;
     return (
       <HashRouter>
         <Route
           render={({ location }) => (
             <div className="app">
-              <Nav color={navColor} />
+
               <TransitionGroup>
                 <CSSTransition key={location.key} timeout={1100} classNames="fade">
                   <Switch>
