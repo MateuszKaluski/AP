@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from 'react-scroll';
 import React, { useState, Fragment } from "react";
-import { useSpring, animated } from 'react-spring';
-import { NavTestLinkToHome } from './NavTestLinkToHome';
-import { NavTestLinkToAbout } from './NavTestLinkToAbout';
+
 
 export const Nav = ({ color, src }) => {
     const logo = (s) => {
@@ -86,7 +84,7 @@ export const Nav = ({ color, src }) => {
                             : 'ulClose'}`}>
                         <div className='listNav__grid'>
                             <div className="item1">
-                                {src == 'projects'
+                                {src === 'projects'
                                     ? (<LinkScroll
                                         onClick={() => setToggled(!isToggled)}
                                         activeClass="active"
