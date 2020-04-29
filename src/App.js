@@ -10,8 +10,7 @@ import About from './sections/About';
 import Project from './sections/Project'
 class App extends Component {
   state = {
-    data: [],
-
+    data: []
   }
   componentDidMount() {
     fetch("https://api.nice-studio.pl/projects/")
@@ -23,9 +22,18 @@ class App extends Component {
   prepareProjects(projects) {
     return projects.map((project, index) => (
       <Route key={index} path={`/projects/${project.id}`}>
+        {this.preloader()}
         <Project {...project} />
       </Route>
     ))
+  }
+  preloader() {
+    return (
+      <div className="preloader">
+        <div className="preloader__left-side"></div>
+        <div className="preloader__right-side"></div>
+      </div>
+    )
   }
 
   render() {
@@ -35,15 +43,18 @@ class App extends Component {
         <Route
           render={({ location }) => (
             <div className="app">
-
               <TransitionGroup>
                 <CSSTransition key={location.key} timeout={1100} classNames="fade">
                   <Switch>
                     <Route path="/about">
+                      {this.preloader()}
                       <About />
                     </Route>
-                    {data && data.length ? this.prepareProjects(data) : null}
+                    {data && data.length
+                      ? this.prepareProjects(data)
+                      : null}
                     <Route exact path="/">
+                    {this.preloader()}
                       <Projects />
                     </Route>
                     <Route component={NotFound} />
@@ -51,7 +62,6 @@ class App extends Component {
                 </CSSTransition>
               </TransitionGroup>
               <Footer />
-
             </div>
           )} />
       </HashRouter>

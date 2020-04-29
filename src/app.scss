@@ -1,21 +1,15 @@
 @import "./scss/general/reset";
-@import "./scss/general/configuration";
 @import "./scss/settings/all";
 @import "./scss/general/icons";
 @import "./scss/settings/colors";
-@import "./scss/sections/header";
-@import "./scss/sections/test";
 @import "./scss/sections/navBottom";
 @import "./scss/sections/nav";
-@import "./scss/sections/navSubpages";
 @import "./scss/sections/projects";
 @import "./scss/sections/project";
-@import "./scss/sections/projectTitle";
 @import "./scss/sections/about";
-@import "./scss/sections/ProjectMarginBottom";
 @import "./scss/sections/footer";
-$fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
+$fa-font-path: "~font-awesome/fonts";
 
 .preloader {
     height: 100%;
@@ -38,7 +32,7 @@ $fa-font-path: "~font-awesome/fonts";
 
         animation-name: LS;
         animation-fill-mode: backwards;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
         animation-duration: 0.5s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
@@ -55,7 +49,7 @@ $fa-font-path: "~font-awesome/fonts";
 
         animation-name: RS;
         animation-fill-mode: forwards;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
         animation-duration: 0.5s;
         animation-iteration-count: 1;
         animation-timing-function: ease-out;
