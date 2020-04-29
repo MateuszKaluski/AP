@@ -46,7 +46,7 @@
             }
             @include respond(tab-port) {
                 display: grid;
-                grid-template-columns: repeat(2, auto);
+                grid-template-columns: 60% 40%;
                 grid-template-rows: repeat(3, min-content);
                 grid-column-gap: 0px;
                 grid-row-gap: 0px;
@@ -79,14 +79,14 @@
                     text-align: start;
                     display: block;
                     color: #fff;
-                    font-size: 3rem;
+                    font-size: 4rem;
                     font-weight: bold;
                 }
                 @include respond(tab-port) {
                     justify-content: flex-end;
                     .contactButton,
                     a {
-                        font-size: 4rem;
+                        font-size: 6rem;
                     }
                 }
             }
@@ -130,6 +130,10 @@
         }
         @include respond(tab-port) {
             padding: 3rem;
+            img{
+                width: 150%;
+                max-width: 150%;
+            }
             a {
                 width: 20rem;
             }

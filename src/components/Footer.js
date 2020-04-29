@@ -11,8 +11,8 @@ export const Footer = () => {
                 <div className='footer__adressContainer'>
                     <div className='footer__content'>
                         <div className='footer__title'>
-                            <div className='footer__item'>NIP:</div>
-                            <div className='footer__item'>REGON:</div>
+                            <div className='footer__item'>NIP: </div>
+                            <div className='footer__item'>REGON: </div>
                         </div>
                         <div className='footer__text'>
                             <div className='footer__item'>9442265881</div>
@@ -22,8 +22,8 @@ export const Footer = () => {
 
                     <div className='footer__content'>
                         <div className='footer__title'>
-                            <div className='footer__item'>Tel:</div>
-                            <div className='footer__item'>Mail:</div>
+                            <div className='footer__item'>Tel: </div>
+                            <div className='footer__item'>Mail: </div>
                         </div>
                         <div className='footer__text'>
                             <div className='footer__item'>889683275</div>
@@ -33,7 +33,7 @@ export const Footer = () => {
 
                     <div className='footer__content'>
                         <div className='footer__title'>
-                            <div className='footer__item'>Adres:</div>
+                            <div className='footer__item'>Adres: </div>
                             <div className='footer__item'></div>
                         </div>
                         <div className='footer__text'>
