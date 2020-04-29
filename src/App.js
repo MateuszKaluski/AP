@@ -29,10 +29,10 @@ class App extends Component {
   }
   preloader() {
     return (
-      <div className="preloader">
+      <>
         <div className="preloader__left-side"></div>
         <div className="preloader__right-side"></div>
-      </div>
+      </>
     )
   }
 
@@ -54,7 +54,7 @@ class App extends Component {
                       ? this.prepareProjects(data)
                       : null}
                     <Route exact path="/">
-                    {this.preloader()}
+                      {this.preloader()}
                       <Projects />
                     </Route>
                     <Route component={NotFound} />
