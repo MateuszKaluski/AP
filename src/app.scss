@@ -11,69 +11,54 @@
 @import "~font-awesome/scss/font-awesome";
 $fa-font-path: "~font-awesome/fonts";
 
-.preloader {
-    height: 100%;
-    position: fixed;
-    width: 100%;
+.preloader__left-side {
     z-index: 1000;
-
     height: 100%;
-    position: absolute;
+    width: 50%;
+    position: fixed;
+    left: 0;
 
-    .preloader__left-side {
-        z-index: 1000;
-        height: 100%;
+    background-color: #d13b33;
 
-        position: fixed;
-        left: 0;
-        right: 100%;
+    animation-name: LS;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+.preloader__right-side {
+    z-index: 1000;
+    height: 100%;
+    width: 50%;
 
-        background-color: #d13b33;
+    position: fixed;
+    right: 0;
 
-        animation-name: LS;
-        animation-fill-mode: backwards;
-        animation-delay: 0.5s;
-        animation-duration: 0.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-    }
-    .preloader__right-side {
-        z-index: 1000;
-        height: 100%;
-        width: 50%;
+    background-color: #d13b33;
 
-        position: fixed;
-        right: 0;
-
-        background-color: #d13b33;
-
-        animation-name: RS;
-        animation-fill-mode: forwards;
-        animation-delay: 0.5s;
-        animation-duration: 0.5s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-out;
-    }
+    animation-name: RS;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
 }
 
 @keyframes LS {
     0% {
-        left: 0;
-        right: 50%;
+        transform: translateX(0%);
     }
     100% {
-        left: 0;
-        right: 100%;
+        transform: translateX(-200%);
     }
 }
 
 @keyframes RS {
     0% {
-        left: 50%;
-        right: 0;
+        transform: translateX(0%);
     }
     100% {
-        left: 100%;
-        right: 0;
+        transform: translateX(200%);
     }
 }
