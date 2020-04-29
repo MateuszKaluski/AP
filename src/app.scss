@@ -12,7 +12,7 @@
 $fa-font-path: "~font-awesome/fonts";
 
 .preloader__left-side {
-    z-index: 1000;
+    z-index: 100001;
     height: 100%;
     width: 50%;
     position: fixed;
@@ -28,7 +28,7 @@ $fa-font-path: "~font-awesome/fonts";
     animation-timing-function: ease-out;
 }
 .preloader__right-side {
-    z-index: 1000;
+    z-index: 100001;
     height: 100%;
     width: 50%;
 
