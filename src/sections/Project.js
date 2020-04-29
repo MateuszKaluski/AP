@@ -27,10 +27,10 @@ export default function Project({ id, title, description, text, videos, images }
 
     return (
         <Fragment>
-            <Nav src="project" color={'rgba(206, 45, 36, 1)'}/>
+            <Nav src="project" color={'rgba(206, 45, 36, 1)'} />
             <div className='project'>
                 <section className='project__container'>
-                    <div className='project__description'>
+                    <div className='project__descriptionCont'>
                         <p className='project__title'>{title}</p>
                         <p className='project__description'>{description}</p>
                         <p className='project__text'>{text}</p>

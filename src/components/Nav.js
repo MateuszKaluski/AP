@@ -1,21 +1,34 @@
-import { Link } from "react-scroll";
-import React, { useState, Fragment } from "react";
-import { useSpring, animated } from 'react-spring';
-import { NavTestLinkToHome } from './NavTestLinkToHome';
-import { NavTestLinkToAbout } from './NavTestLinkToAbout';
+import {Link} from "react-router-dom";
+import React, {useState, Fragment} from "react";
+import {useSpring, animated} from 'react-spring';
+import {NavTestLinkToHome} from './NavTestLinkToHome';
+import {NavTestLinkToAbout} from './NavTestLinkToAbout';
 
-export const Nav = ({ color, src }) => {
+export const Nav = ({color, src}) => {
     const logo = (s) => {
         if (s === 'project') {
-            return (<picture>
-                <source media="(min-width: 56.25em)" srcSet={require(!isToggled ? '../images/loga/6s.png' : '../images/loga/3s.png')}></source>
-                <img alt={'logo'} className='logo-size' src={require(!isToggled ? '../images/loga/5.png' : '../images/loga/2.png')} />
-            </picture>)
+            return (
+                <picture>
+                    <source media="(min-width: 56.25em)" srcSet={require('../images/loga/6s.png')}></source>
+                    <img alt={'logo'} className='logo-size' src={require('../images/loga/5.png')}/>
+                </picture>
+            )
         } else if (s === 'projects') {
-            return (<picture>
-                <source media="(min-width: 56.25em)" srcSet={require(isToggled ? '../images/loga/6s.png' : '../images/loga/3s.png')}></source>
-                <img alt={'logo'} className='logo-size' src={require(isToggled ? '../images/loga/5.png' : '../images/loga/2.png')} />
-            </picture>)
+            return (
+                <picture>
+                    <source
+                        media="(min-width: 56.25em)"
+                        srcSet={require(isToggled
+                        ? '../images/loga/6s.png'
+                        : '../images/loga/3s.png')}></source>
+                    <img
+                        alt={'logo'}
+                        className='logo-size'
+                        src={require(isToggled
+                        ? '../images/loga/5.png'
+                        : '../images/loga/2.png')}/>
+                </picture>
+            )
         }
 
     }
@@ -27,21 +40,37 @@ export const Nav = ({ color, src }) => {
 
     return (
         <Fragment>
-            <div id="nav" className='nav' style={{ backgroundColor: color }}>
+            <div
+                id="nav"
+                className='nav'
+                style={{
+                backgroundColor: color
+            }}>
                 <div className='nav__container'>
-                    <div className='nav__logo' style={{ backgroundColor: color }}>
+                    <div
+                        className='nav__logo'
+                        style={{
+                        backgroundColor: color
+                    }}>
                         <Link
-                            className={isToggled ? 'logo openL' : 'logo '}
-                            activeClass="active"
-                            to="projects"
-                            spy={true}
-                            smooth={true}
-                            offset={-125}
-                            duration={500}>
+                            className={isToggled
+                            ? 'logo openL'
+                            : 'logo '}
+                            to="/">
                             {logo(src)}
                         </Link>
-                        <div onClick={() => setToggled(!isToggled)} className={isToggled ? 'menuIconContainer colorL' : src === '' ? 'menuIconContainer'}>
-                            <div id="nav-icon3" className={!isToggled ? '' : 'open '}>
+                        <div
+                            onClick={() => setToggled(!isToggled)}
+                            className={isToggled
+                            ? 'menuIconContainer colorL'
+                            : src === 'project'
+                                ? 'menuIconContainer colorL'
+                                : 'menuIconContainer '}>
+                            <div
+                                id="nav-icon3"
+                                className={!isToggled
+                                ? ''
+                                : 'open '}>
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -52,18 +81,11 @@ export const Nav = ({ color, src }) => {
 
                     <div
                         className={`nav__list ${isToggled
-                            ? 'ulOpen'
-                            : 'ulClose'}`}>
+                        ? 'ulOpen'
+                        : 'ulClose'}`}>
                         <div className='listNav__grid'>
                             <div className="item1">
-                                <Link
-                                    onClick={() => setToggled(!isToggled)}
-                                    activeClass="active"
-                                    to="projects"
-                                    spy={true}
-                                    smooth={true}
-                                    offset={-125}
-                                    duration={500}>
+                                <Link onClick={() => setToggled(!isToggled)} to="/">
                                     projekty
                                 </Link>
                             </div>
@@ -80,8 +102,8 @@ export const Nav = ({ color, src }) => {
 
                             <div
                                 className={isDisplay
-                                    ? 'item4 openContact'
-                                    : 'item4 closeContact'}>
+                                ? 'item4 openContact'
+                                : 'item4 closeContact'}>
                                 <ul>
 
                                     <li className='contact__mail'>

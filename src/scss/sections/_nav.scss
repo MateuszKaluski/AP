@@ -1,4 +1,5 @@
 .nav {
+    
     width: 100%;
     position: fixed;
     z-index: 100000;
@@ -14,7 +15,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(206, 45, 36, 1);
+        background-color: rgba(206, 45, 36, 0.93);
         transition: height 0.26s ease-in;
         display: flex;
         width: 100%;
@@ -39,23 +40,54 @@
             grid-auto-rows: min-content;
             grid-column-gap: 0;
             grid-row-gap: 0;
+            @include respond(tab-land) {
+                width: 1200px;
+                margin: 0 auto;
+            }
+            @include respond(tab-port) {
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(3, min-content);
+                grid-column-gap: 0px;
+                grid-row-gap: 0px;
+
+                .item1 {
+                    grid-area: 1 / 2 / 2 / 3;
+                }
+                .item2 {
+                    grid-area: 2 / 2 / 3 / 3;
+                }
+                .item3 {
+                    grid-area: 3 / 2 / 4 / 3;
+                }
+                .item4 {
+                    grid-area: 3 / 1 / 4 / 2;
+                }
+            }
             .item1,
             .item2,
             .item3,
             .item4 {
-                width: 100%;
+                width: 80%;
                 display: flex;
 
                 padding-left: 8rem;
                 .contactButton,
                 a {
+                    text-decoration: none ;
                     padding: 1rem 0;
                     text-align: start;
-                    width: 100%;
                     display: block;
                     color: #fff;
                     font-size: 3rem;
                     font-weight: bold;
+                }
+                @include respond(tab-port) {
+                    justify-content: flex-end;
+                    .contactButton,
+                    a {
+                        font-size: 4rem;
+                    }
                 }
             }
             .item4 {
@@ -64,6 +96,9 @@
                     font-size: 2rem;
                     padding: 0;
                     text-decoration: none;
+                    @include respond(tab-port) {
+                        font-size: 3rem;
+                    }
                 }
             }
         }
