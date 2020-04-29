@@ -6,7 +6,7 @@ import NavSubpages from '../components/NavSubpages';
 
 const About = () => (
     <Fragment>
-        <Nav src="project" color={'rgba(206, 45, 36, 1)'}/>
+        <Nav src="about" color={'rgba(206, 45, 36, 1)'}/>
         <div className="page">
             <section className='about' id='about'>
                 <div className='about__container'>
