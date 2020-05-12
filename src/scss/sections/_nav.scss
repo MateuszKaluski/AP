@@ -52,15 +52,26 @@
 
                 .item1 {
                     grid-area: 1 / 2 / 2 / 3;
+                    cursor: pointer;
                 }
                 .item2 {
                     grid-area: 2 / 2 / 3 / 3;
+                    cursor: pointer;
                 }
                 .item3 {
                     grid-area: 3 / 2 / 4 / 3;
+                    cursor: pointer;
                 }
                 .item4 {
                     grid-area: 3 / 1 / 4 / 2;
+                }
+                .item1:hover,
+                .item2:hover,
+                .item3:hover {
+                    a,
+                    span {
+                        color: #373737;
+                    }
                 }
             }
             .item1,
@@ -124,7 +135,7 @@
     }
 
     &__logo {
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.851);
 
         display: flex;
         justify-content: space-between;
@@ -167,6 +178,12 @@
 }
 .closeContact {
     animation: fadeToLeft 0.4s ease-out forwards;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 @keyframes fadeFromLeft {
     from {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './app.scss'
-import { Router, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 // Components
 import { Footer } from './components/Footer';
@@ -39,7 +39,7 @@ class App extends Component {
   render() {
     const { data } = this.state;
     return (
-      <Router>
+      <HashRouter>
         <Route
           render={({ location }) => (
             <div className="app">
@@ -64,7 +64,7 @@ class App extends Component {
               <Footer />
             </div>
           )} />
-      </Router>
+      </HashRouter>
     )
   }
 }
