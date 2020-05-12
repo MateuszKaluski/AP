@@ -9,7 +9,7 @@ class Projects extends Component {
         fetch("https://api.nice-studio.pl/projects/")
             .then(resp => resp.json())
             .then(data => {
-                
+
                 this.setState({ data: data })
             })
     }
@@ -24,8 +24,12 @@ class Projects extends Component {
                             <img alt={p.title} src={p.imagesMin[0]} />
                         </div>
                         <div className='projects__projectHeader'>
-                            <h2 className='projects__header'>{p.title}</h2>
-                            <p className='projects__description'>{p.description}</p>
+                            <div className='projects__header--container'>
+                                <h2 className='projects__header'>{p.title}</h2>
+                            </div>
+                            <div className='projects__header--container'>
+                                <p className='projects__description'>{p.description}</p>
+                            </div>
                         </div>
                     </Link>
                 </div>
@@ -35,7 +39,7 @@ class Projects extends Component {
 
         return (
             <Fragment>
-                <Nav src="projects"/>
+                <Nav src="projects" />
                 <section className='projects'>
                     <div className='projects__container'>
                         {this.prepareProjects()}

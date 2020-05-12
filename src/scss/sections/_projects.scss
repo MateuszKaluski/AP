@@ -30,14 +30,41 @@
         padding-bottom: 5rem;
     }
     &__projectHeader {
-        padding-top: 1rem;
+        padding: 1rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        h2,
+        p {
+            display: inline-block;
+            position: relative;
+            &:before {
+                transition: width 0.3s linear;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color: #ce2d24;
+                bottom: 0;
+                position: absolute;
+            }
+        }
+
+        p {
+            &:before {
+                transition-delay: 0.3s;
+            }
+        }
+        &:hover {
+            h2,
+            p {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
     }
     &__header,
     &__description {
         color: rgba(206, 45, 36, 1);
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     &__header {
@@ -52,5 +79,4 @@
         display: block;
         cursor: pointer;
     }
-    
 }
