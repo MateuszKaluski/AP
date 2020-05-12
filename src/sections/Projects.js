@@ -9,6 +9,7 @@ class Projects extends Component {
         fetch("https://api.nice-studio.pl/projects/")
             .then(resp => resp.json())
             .then(data => {
+                
                 this.setState({ data: data })
             })
     }

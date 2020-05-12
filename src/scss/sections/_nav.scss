@@ -1,5 +1,4 @@
 .nav {
-    
     width: 100%;
     position: fixed;
     z-index: 100000;
@@ -33,7 +32,7 @@
     }
     .listNav {
         &__grid {
-            padding-top: 12rem;
+            padding-top: 23rem;
             width: 100%;
             display: grid;
             grid-template-columns: 100%;
@@ -74,7 +73,7 @@
                 padding-left: 8rem;
                 .contactButton,
                 a {
-                    text-decoration: none ;
+                    text-decoration: none;
                     padding: 1rem 0;
                     text-align: start;
                     display: block;
@@ -89,6 +88,13 @@
                         font-size: 6rem;
                     }
                 }
+                @include respond(tab-land) {
+                    justify-content: flex-end;
+                    .contactButton,
+                    a {
+                        font-size: 8rem;
+                    }
+                }
             }
             .item4 {
                 padding-top: 1rem;
@@ -97,6 +103,9 @@
                     padding: 0;
                     text-decoration: none;
                     @include respond(tab-port) {
+                        font-size: 2.5rem;
+                    }
+                    @include respond(tab-land) {
                         font-size: 3rem;
                     }
                 }
@@ -129,8 +138,8 @@
             height: 100%;
         }
         @include respond(tab-port) {
-            padding: 3rem;
-            img{
+            padding: 3rem 0;
+            img {
                 width: 150%;
                 max-width: 150%;
             }
@@ -141,11 +150,20 @@
     }
 }
 .menuIconContainer {
-    transform: scale(0.7);
-    padding-right: 3rem;
+    transform: scale(0.5);
+    padding-right: 2rem;
+    @include respond(tab-port) {
+        transform: scale(0.6);
+    }
 }
 .openContact {
     animation: fadeFromLeft 0.4s ease-out forwards;
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
 .closeContact {
     animation: fadeToLeft 0.4s ease-out forwards;

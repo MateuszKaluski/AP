@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
 import { Nav } from "../components/Nav";
+import renderHTML from 'react-render-html';
 export default function Project({ id, title, description, text, videos, images }) {
 
     const getVideos = (videos) => {
@@ -23,6 +24,9 @@ export default function Project({ id, title, description, text, videos, images }
         }
         return null;
     }
+    const getText = (text) => {
+        return { __html: text };
+    }
 
 
     return (
@@ -33,7 +37,10 @@ export default function Project({ id, title, description, text, videos, images }
                     <div className='project__descriptionCont'>
                         <p className='project__title'>{title}</p>
                         <p className='project__description'>{description}</p>
-                        <p className='project__text'>{text}</p>
+                        <div className='project__text' >
+                            <p className='project__text-cont' dangerouslySetInnerHTML={getText(text)}>
+                            </p>
+                        </div>
                     </div>
                     {getVideos(videos)}
                     {getImages(images)}

@@ -11,7 +11,7 @@
         padding: 8rem 0;
         @include respond(tab-port) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: .8fr 1fr;
             grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 0px;
             grid-row-gap: 0px;
@@ -31,10 +31,14 @@
         }
     }
     &__text {
-        padding: 2rem 0;
-        font-size: 2rem;
-        font-weight: 500;
-
+        display: flex;
+        justify-content: flex-end;
+        &-cont{
+            padding: 2rem 0;
+            font-size: 2rem;
+            font-weight: 500;
+            display: inline;
+        }
     }
     &__container {
         @include respond(tab-land) {

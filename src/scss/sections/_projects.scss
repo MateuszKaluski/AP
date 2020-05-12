@@ -1,6 +1,6 @@
 .projects {
+    padding: 4rem 0;
     &__container {
-       
         padding: 0 2rem;
         padding-top: 13rem;
         display: grid;
@@ -27,15 +27,19 @@
         text-decoration: none;
     }
     &__project {
-        padding-bottom: 2rem;
+        padding-bottom: 5rem;
     }
     &__projectHeader {
-        padding-top: 3rem;
+        padding-top: 1rem;
     }
     &__header,
     &__description {
         color: rgba(206, 45, 36, 1);
+        &:hover {
+            text-decoration: underline;
+        }
     }
+
     &__header {
         text-transform: capitalize;
         font-size: 3rem;
@@ -48,4 +52,5 @@
         display: block;
         cursor: pointer;
     }
+    
 }
