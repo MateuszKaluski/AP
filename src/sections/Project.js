@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
 import { Nav } from "../components/Nav";
-import renderHTML from 'react-render-html';
 export default function Project({ id, title, description, text, videos, images }) {
 
     const getVideos = (videos) => {
