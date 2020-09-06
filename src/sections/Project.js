@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
 import { Nav } from "../components/Nav";
-const end = [4];
+const end = [4,9];
 export default function Project({ id, title, description, text, videos, images }) {
 
     const getVideos = (videos) => {
