@@ -10,7 +10,11 @@ class Projects extends Component {
             .then(resp => resp.json())
             .then(data => {
 
-                this.setState({ data: data })
+                this.setState({
+                    data: data.sort((a, b) => {
+                        return a.id - b.id;
+                    })
+                })
             })
     }
     prepareProjects() {
