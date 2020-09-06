@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import NavBottom from '../components/NavBottom';
 import { Nav } from "../components/Nav";
+const end = [4];
 export default function Project({ id, title, description, text, videos, images }) {
 
     const getVideos = (videos) => {
@@ -41,8 +42,9 @@ export default function Project({ id, title, description, text, videos, images }
                             </p>
                         </div>
                     </div>
-                    {getVideos(videos)}
+                    {end.includes(id) ? null : getVideos(videos)}
                     {getImages(images)}
+                    {end.includes(id) ? getVideos(videos) : null}
                 </section>
             </div>
             <NavBottom id={id} title={title} />
