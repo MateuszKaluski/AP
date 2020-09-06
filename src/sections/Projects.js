@@ -15,7 +15,6 @@ class Projects extends Component {
                         return a.id - b.id;
                     })
                 })
-                console.log(this.state.data);
             })
     }
     prepareProjects() {
