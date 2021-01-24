@@ -8,7 +8,6 @@ import { NotFound } from "./sections/NotFound";
 import Projects from "./sections/Projects";
 import About from "./sections/About";
 import Project from "./sections/Project";
-import Video from "./videos/start.mp4";
 class App extends Component {
   state = {
     data: [],
@@ -52,37 +51,40 @@ class App extends Component {
         <Route
           render={({ location }) => (
             <div className="app">
-              {!isEndAnimation ? (
+              {/* {!isEndAnimation ? (
                 <div className="startVideo">
-                  <video onEnded={this.handleEnd} autoPlay src={Video}></video>
+                  <video onEnded={this.handleEnd} autoPlay>
+                    <source
+                      src={"https://nice-studio.pl/images/start.mp4"}
+                      type="video/mp4"
+                    />
+                  </video>
                 </div>
-              ) : (
-                <>
-                  <TransitionGroup>
-                    <CSSTransition
-                      key={location.key}
-                      timeout={1100}
-                      classNames="fade"
-                    >
-                      <Switch>
-                        <Route path="/about">
-                          {this.preloader()}
-                          <About />
-                        </Route>
-                        {data && data.length
-                          ? this.prepareProjects(data)
-                          : null}
-                        <Route exact path="/">
-                          {this.preloader()}
-                          <Projects />
-                        </Route>
-                        <Route component={NotFound} />
-                      </Switch>
-                    </CSSTransition>
-                  </TransitionGroup>
-                  <Footer />
-                </>
-              )}
+              ) : ( */}
+              <>
+                <TransitionGroup>
+                  <CSSTransition
+                    key={location.key}
+                    timeout={1100}
+                    classNames="fade"
+                  >
+                    <Switch>
+                      <Route path="/about">
+                        {this.preloader()}
+                        <About />
+                      </Route>
+                      {data && data.length ? this.prepareProjects(data) : null}
+                      <Route exact path="/">
+                        {this.preloader()}
+                        <Projects />
+                      </Route>
+                      <Route component={NotFound} />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+                <Footer />
+              </>
+              {/* )} */}
             </div>
           )}
         />
